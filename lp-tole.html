@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toiture en Tôle Montréal — Économisez jusqu'à 4 000$ | Toitures Métalliques Montréal</title>
+  <meta name="description" content="Toiture en tôle d'acier à Montréal depuis 1983. Installation professionnelle, garantie 50 ans. Soumission gratuite sur place. RBQ 5836-0504-01.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@600;700&family=Inter:wght@400&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="public/images/hero-1200w.webp" imagesrcset="public/images/hero-480w.webp 480w, public/images/hero-768w.webp 768w, public/images/hero-1200w.webp 1200w, public/images/hero-1920w.webp 1920w" imagesizes="100vw">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cta': '#FAFF10',
+            'cta-text': '#0F172A',
+            'accent-gold': '#FFC966',
+            'bg-main': '#FFFFFF',
+            'bg-alt': '#F0F4FA',
+            'text-primary': '#0F172A',
+            'text-secondary': '#374151',
+            'header-dark': '#222222',
+            'input-bg': '#F9FAFB',
+            'input-border': '#D1D5DB',
+            'card-border': '#E5E7EB',
+          },
+          fontFamily: {
+            'heading': ['Figtree', 'sans-serif'],
+            'body': ['Inter', 'sans-serif'],
+          },
+          borderRadius: {
+            'btn': '10px',
+            'pill': '50px',
+            'card': '16px',
+            'input': '8px',
+          },
+          boxShadow: {
+            'card': '0 4px 24px rgba(0,0,0,0.08)',
+            'cta-hover': '0 4px 20px rgba(250,255,16,0.4)',
+            'elevated': '0 2px 12px rgba(0,0,0,0.06)',
+            'floating': '0 8px 32px rgba(0,0,0,0.10)',
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; padding-top: 64px; }
+    @media (min-width: 768px) { body { padding-top: 72px; } }
+
+    .logo-header { max-height: 52px; width: auto; filter: drop-shadow(0 1px 3px rgba(0,0,0,0.5)); }
+    @media (max-width: 767px) { .logo-header { max-height: 44px; } }
+    .hero-h1 { text-shadow: 2px 2px 10px rgba(0,0,0,0.9); }
+    .hero-sub { text-shadow: 1px 1px 6px rgba(0,0,0,0.8); }
+
+    .will-fade {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .will-fade.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .counter-value { font-variant-numeric: tabular-nums; }
+
+    button:focus-visible, a:focus-visible, input:focus-visible {
+      outline: 2px solid #FAFF10;
+      outline-offset: 2px;
+    }
+
+    .btn-primary:active { transform: scale(0.97); }
+    .ghl-input.input-error { border-color: #EE4444; background: #fff5f5; }
+    .ghl-input.input-error + .ghl-error { display: block; }
+
+    @keyframes fomoPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    .fomo-pulse { animation: fomoPulse 2s ease-in-out infinite; }
+  </style>
+</head>
+<body class="font-body text-text-primary bg-bg-main">
+
+  <!-- ============================================ -->
+  <!-- STICKY HEADER                                -->
+  <!-- ============================================ -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-[72px] flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="shrink-0">
+        <img src="public/images/logo.avif" alt="Toitures Métalliques Montréal" width="512" height="312" class="logo-header w-[140px] md:w-[200px] object-contain">
+      </a>
+      <!-- Phone pill — desktop -->
+      <a href="tel:+15148670787" class="hidden md:inline-flex items-center gap-2 bg-cta text-cta-text font-heading text-xl font-bold px-8 py-4 rounded-pill hover:shadow-cta-hover shadow-[0_2px_12px_rgba(250,255,16,0.3)] border border-[#E5E000] transition-shadow duration-200">
+        <i data-lucide="phone" class="w-5 h-5"></i>
+        (514) 867-0787
+      </a>
+      <!-- Phone pill — mobile -->
+      <a href="tel:+15148670787" class="md:hidden inline-flex items-center gap-2 bg-cta text-cta-text font-heading text-[16px] font-semibold px-5 py-3 rounded-pill hover:shadow-cta-hover shadow-[0_2px_12px_rgba(250,255,16,0.3)] border border-[#E5E000] transition-shadow duration-200">
+        <i data-lucide="phone" class="w-5 h-5"></i>
+        (514) 867-0787
+      </a>
+    </div>
+  </header>
+
+  <!-- ============================================ -->
+  <!-- SECTION 1: HERO — bg #FFFFFF                 -->
+  <!-- ============================================ -->
+  <section id="hero" class="relative overflow-hidden">
+    <!-- Hero background image -->
+    <div class="absolute inset-0">
+      <img
+        src="public/images/hero-1200w.webp"
+        srcset="public/images/hero-480w.webp 480w, public/images/hero-768w.webp 768w, public/images/hero-1200w.webp 1200w, public/images/hero-1920w.webp 1920w"
+        sizes="100vw"
+        width="1184" height="1080"
+        alt="" aria-hidden="true" class="w-full h-full object-cover" loading="eager" fetchpriority="high">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/[0.65] via-black/[0.45] to-transparent lg:bg-gradient-to-r lg:from-black/70 lg:via-black/50 lg:to-black/20"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20 lg:grid lg:grid-cols-2 lg:gap-12 lg:items-start">
+
+      <!-- LEFT: Text -->
+      <div class="fade-in-section text-center lg:text-left">
+        <h1 class="font-heading text-3xl md:text-4xl leading-[1.2] tracking-[-0.03em] text-white font-bold hero-h1">
+          Toiture en Tôle à Montréal — Économisez jusqu'à <span class="text-cta">4 000$</span>
+        </h1>
+        <p class="text-white/90 text-base md:text-lg mt-4 leading-[1.7] hero-sub">
+          Tôle acier calibre 25 · Résiste à 60 ans de neige · Installation en 1-2 jours · Soumission 100% gratuite
+        </p>
+    <div class="mt-5 inline-flex items-center gap-2 bg-[#0F172A] text-white rounded-btn px-4 py-2.5">
+  <span class="flex-shrink-0">⚡</span>
+  <span class="text-xs md:text-base font-heading font-bold">Offre printemps — Économisez 4 000$ | <span class="fomo-pulse">15 places restantes</span></span>
+</div>
+        <!-- Desktop: phone only (form is already visible on the right) -->
+        <div class="hidden lg:flex mt-6 items-center gap-4">
+          <a href="tel:+15148670787" class="inline-flex items-center gap-2 bg-cta text-cta-text font-heading text-xl font-bold px-8 py-4 rounded-pill hover:shadow-cta-hover shadow-[0_2px_12px_rgba(250,255,16,0.3)] border border-[#E5E000] transition-shadow duration-200 btn-primary">
+            <i data-lucide="phone" class="w-6 h-6"></i>
+            (514) 867-0787
+          </a>
+        </div>
+        <!-- Mobile: phone only -->
+        <div class="flex lg:hidden mt-6 justify-center">
+          <a href="tel:+15148670787" class="inline-flex items-center gap-2 bg-cta text-cta-text font-heading text-xl font-bold px-8 py-4 rounded-pill hover:shadow-cta-hover shadow-[0_2px_12px_rgba(250,255,16,0.3)] border border-[#E5E000] transition-shadow duration-200 btn-primary">
+            <i data-lucide="phone" class="w-6 h-6"></i>
+            (514) 867-0787
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form Card -->
+      <div id="hero-form" class="mt-8 lg:mt-0 fade-in-section">
+        <div class="bg-white shadow-card border border-card-border rounded-card p-6 md:p-8">
+          <h3 class="font-heading text-[20px] md:text-[24px] leading-[1.2] tracking-[-0.03em] text-text-primary text-center mb-6">
+            Obtenez votre soumission gratuite sur place
+          </h3>
+          <form class="ghl-form" data-form-id="hero">
+            <!-- Honeypot -->
+            <div style="position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden" aria-hidden="true">
+              <input type="text" name="company_fax_number" tabindex="-1" autocomplete="nope">
+            </div>
+            <div class="space-y-4">
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label for="hero-nom" class="block text-sm font-bold text-text-primary mb-1">Nom complet *</label>
+                  <input type="text" id="hero-nom" name="name" required placeholder="Votre nom complet" autocomplete="name" class="ghl-input w-full bg-input-bg border border-input-border rounded-input px-4 py-3 text-base text-text-primary placeholder:text-gray-400 focus:border-cta focus:ring-1 focus:ring-cta transition-colors duration-200">
+                  <p class="ghl-error hidden text-[#EE4444] text-xs mt-1 font-medium">Veuillez entrer votre nom</p>
+                </div>
+                <div>
+                  <label for="hero-tel" class="block text-sm font-bold text-text-primary mb-1">Téléphone *</label>
+                  <input type="tel" id="hero-tel" name="phone" required placeholder="(514) 000-0000" autocomplete="tel" class="ghl-input w-full bg-input-bg border border-input-border rounded-input px-4 py-3 text-base text-text-primary placeholder:text-gray-400 focus:border-cta focus:ring-1 focus:ring-cta transition-colors duration-200">
+                  <p class="ghl-error hidden text-[#EE4444] text-xs mt-1 font-medium">Veuillez entrer votre téléphone</p>
+                </div>
+              </div>
+              <div>
+                <label for="hero-email" class="block text-sm font-bold text-text-primary mb-1">Courriel</label>
+                <input type="email" id="hero-email" name="email" placeholder="vous@exemple.com" autocomplete="email" class="ghl-input w-full bg-input-bg border border-input-border rounded-input px-4 py-3 text-base text-text-primary placeholder:text-gray-400 focus:border-cta focus:ring-1 focus:ring-cta transition-colors duration-200">
+              </div>
+              <div>
+                <label for="hero-address" class="block text-sm font-bold text-text-primary mb-1">Adresse *</label>
+                <input type="text" id="hero-address" name="address" required placeholder="Votre adresse complète" autocomplete="street-address" class="ghl-input w-full bg-input-bg border border-input-border rounded-input px-4 py-3 text-base text-text-primary placeholder:text-gray-400 focus:border-cta focus:ring-1 focus:ring-cta transition-colors duration-200">
+                <p class="ghl-error hidden text-[#EE4444] text-xs mt-1 font-medium">Veuillez entrer votre adresse</p>
+              </div>
+              <div>
+                <label for="hero-message" class="block text-sm font-bold text-text-primary mb-1">Décrivez brièvement votre projet</label>
+                <textarea id="hero-message" name="message" placeholder="Type de toit, superficie, urgence..." rows="2" class="ghl-input w-full bg-input-bg border border-input-border rounded-input px-4 py-3 text-base text-text-primary placeholder:text-gray-400 focus:border-cta focus:ring-1 focus:ring-cta transition-colors duration-200 resize-none"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="ghl-submit w-full mt-6 bg-cta text-cta-text font-heading text-xl font-extrabold px-8 py-5 rounded-btn hover:shadow-cta-hover shadow-[0_4px_20px_rgba(250,255,16,0.35)] border border-[#E5E000] transition-shadow duration-200 btn-primary">
+              Obtenir ma soumission gratuite
+            </button>
+            <div class="flex items-center justify-center gap-1.5 mt-3 text-xs text-text-secondary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" width="13" height="13"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+              Vos informations restent 100% confidentielles
+            </div>
+          </form>
+          <!-- Trust signals -->
+          <div class="mt-4 text-center">
+            <div class="inline-flex items-center gap-1 text-sm text-accent-gold">
+              <span>⭐⭐⭐⭐⭐</span>
+            </div>
+            <p class="text-xs text-text-secondary mt-0.5 font-heading font-bold">4.9/5 — Plus de 200 avis Google</p>
+          </div>
+          <div class="flex flex-wrap gap-2 mt-3 justify-center">
+            <span class="inline-flex items-center gap-1.5 text-xs text-text-secondary border border-card-border rounded-full px-3 py-1.5">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> RBQ 5836-0504-01
+            </span>
+            <span class="inline-flex items-center gap-1.5 text-xs text-text-secondary border border-card-border rounded-full px-3 py-1.5">
+              <i data-lucide="award" class="w-3.5 h-3.5"></i> APCHQ
+            </span>
+            <span class="inline-flex items-center gap-1.5 text-xs text-text-secondary border border-card-border rounded-full px-3 py-1.5">
+              <i data-lucide="hard-hat" class="w-3.5 h-3.5"></i> CNESST
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 2: TRUST BAR — bg #F0F4FA            -->
+  <!-- ============================================ -->
+  <section id="trust-bar" class="bg-bg-alt py-10 md:py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-4 text-center items-center">
+        <!-- Stat 1: Google Rating -->
+        <div>
+          <div class="flex justify-center gap-0.5 mb-1">
+            <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
+          </div>
+          <span class="block font-heading text-[28px] md:text-[32px] text-text-primary counter-value">
+            <span class="counter" data-target="4.9" data-suffix="/5">0</span>
+          </span>
+          <span class="text-sm text-text-secondary">sur Google</span>
+        </div>
+        <!-- Stat 2: Roofs installed -->
+        <div>
+          <span class="block font-heading text-[28px] md:text-[32px] text-text-primary counter-value">
+            <span class="counter" data-target="2000" data-suffix="+">0</span>
+          </span>
+          <span class="text-sm text-text-secondary">toitures en tôle installées</span>
+        </div>
+        <!-- Stat 3: Since 1983 -->
+        <div>
+          <span class="block font-heading text-[28px] md:text-[32px] text-text-primary counter-value">
+            Depuis <span class="counter" data-target="1983" data-suffix="">0</span>
+          </span>
+          <span class="text-sm text-text-secondary">Entrepreneur toiture tôle</span>
+        </div>
+        <!-- Stat 4: Teams -->
+        <div>
+          <span class="block font-heading text-[28px] md:text-[32px] text-text-primary counter-value">
+            <span class="counter" data-target="6" data-suffix="">0</span> équipes
+          </span>
+          <span class="text-sm text-text-secondary">Zéro sous-traitant</span>
+        </div>
+        <!-- Stat 5: Certifications -->
+        <div class="col-span-2 md:col-span-1">
+          <div class="flex justify-center gap-1 mb-1">
+            <i data-lucide="shield-check" class="w-5 h-5 text-text-secondary"></i>
+          </div>
+          <span class="block font-heading text-base text-text-primary">RBQ | APCHQ | CNESST</span>
+          <span class="text-sm text-text-secondary">Licence complète</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 3: PROBLEM AGITATION — bg #FFFFFF    -->
+  <!-- ============================================ -->
+  <section class="bg-bg-main py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading text-[26px] md:text-[36px] leading-[1.2] tracking-[-0.03em] text-text-primary text-center fade-in-section">
+        Votre toit montre des signes d'usure? Voici ce que ça vous coûte d'attendre.
+      </h2>
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8 mt-10 md:mt-12">
+
+        <!-- Objection 1 -->
+        <div class="bg-white rounded-card p-6 md:p-8 shadow-elevated border border-card-border/50 border-l-4 border-l-cta fade-in-section">
+          <h3 class="font-heading text-[18px] md:text-[22px] leading-[1.2] tracking-[-0.03em] text-text-primary mb-3 text-center md:text-left">
+            Les réparations qui s'accumulent
+          </h3>
+          <p class="text-text-secondary leading-[1.7] text-center md:text-left">
+            Un toit en asphalte de 15 ans, c'est des réparations à répétition — bardeaux qui lèvent, infiltrations, dégâts de glace. Chaque intervention coûte entre 1 500$ et 3 000$. Une toiture en tôle élimine ces appels de service pour les 50 prochaines années.
+          </p>
+        </div>
+
+        <!-- Objection 2 -->
+        <div class="bg-white rounded-card p-6 md:p-8 shadow-elevated border border-card-border/50 border-l-4 border-l-cta fade-in-section">
+          <h3 class="font-heading text-[18px] md:text-[22px] leading-[1.2] tracking-[-0.03em] text-text-primary mb-3 text-center md:text-left">
+            Le prix de la tôle augmente chaque année
+          </h3>
+          <p class="text-text-secondary leading-[1.7] text-center md:text-left">
+            Le coût de l'acier a augmenté de 30% en 3 ans. Plus vous attendez, plus votre toit en tôle coûtera cher. Verrouiller le prix maintenant, c'est économiser.
+          </p>
+        </div>
+
+        <!-- Objection 3 -->
+        <div class="bg-white rounded-card p-6 md:p-8 shadow-elevated border border-card-border/50 border-l-4 border-l-cta fade-in-section">
+          <h3 class="font-heading text-[18px] md:text-[22px] leading-[1.2] tracking-[-0.03em] text-text-primary mb-3 text-center md:text-left">
+            Les dommages cachés empirent
+          </h3>
+          <p class="text-text-secondary leading-[1.7] text-center md:text-left">
+            Sous un vieux toit, l'eau s'infiltre lentement. La structure pourrit sans que vous le voyiez. Plus vous attendez, plus les réparations structurelles s'ajoutent au prix de votre nouveau toit de tôle.
+          </p>
+        </div>
+
+        <!-- Objection 4 -->
+        <div class="bg-white rounded-card p-6 md:p-8 shadow-elevated border border-card-border/50 border-l-4 border-l-cta fade-in-section">
+          <h3 class="font-heading text-[18px] md:text-[22px] leading-[1.2] tracking-[-0.03em] text-text-primary mb-3 text-center md:text-left">
+            La saison de construction est courte au Québec
+          </h3>
+          <p class="text-text-secondary leading-[1.7] text-center md:text-left">
+            Les meilleurs couvreurs tôle sont bookés des mois à l'avance. Réserver votre date maintenant, c'est garantir une installation avant l'automne.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 4: COST COMPARISON — bg #F0F4FA      -->
+  <!-- ============================================ -->
+  <section class="bg-bg-alt py-16 md:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading text-[26px] md:text-[36px] leading-[1.2] tracking-[-0.03em] text-text-primary text-center fade-in-section">
+        Asphalte vs Tôle : le vrai coût sur 40 ans
+      </h2>
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8 mt-10 md:mt-12">
+
+        <!-- Asphalte Card -->
+        <div class="bg-white rounded-card p-6 md:p-8 border border-card-border shadow-elevated fade-in-section">
+          <h3 class="font-heading text-[22px] md:text-[26px] leading-[1.2] tracking-[-0.03em] text-text-primary text-center mb-6">Asphalte</h3>
+          <dl class="space-y-0">
+            <div class="flex justify-between items-baseline py-3 border-b border-card-border/50">
+              <dt class="text-text-secondary text-sm">Coût initial</dt>
+              <dd class="font-heading text-text-primary text-right">~18 000$</dd>
+            </div>
+            <div class="flex justify-between items-baseline py-3 border-b border-card-border/50">
+              <dt class="text-text-secondary text-sm">Durée de vie</dt>
+              <dd class="font-heading text-text-primary text-right">12-15 ans</dd>
+            </div>
+            <div class="flex justify-between items-baseline py-3 border-b border-card-border/50">
+              <dt class="text-text-secondary text-sm">Remplacements sur 40 ans</dt>
+              <dd class="font-heading text-text-primary text-right">3 fois</dd>
+            </div>
+            <div class="flex justify-between items-baseline py-3 border-b border-card-border/50">
+              <dt class="text-text-secondary text-sm">Coût total sur 40 ans</dt>
+              <dd class="font-heading text-[#DC2626] text-right text-lg font-semibold">~65 000$</dd>
+            </div>
+            <div class="flex justify-between items-baseline py-3 border-b border-card-border/50">
+              <dt class="text-text-secondary text-sm">Entretien annuel</dt>
+              <dd class="font-heading text-text-primary text-right">Oui</dd>
+            </div>
+            <div class="flex justify-between items-baseline py-3">
+              <dt class="text-text-secondary text-sm">Résistance aux vents</dt>
+              <dd class="font-heading text-text-primary text-right">120 km/h</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Metal Card (highlighted) -->
+        <div class="relative bg-white rounded-card p-6 md:p-8 border-2 border-accent-gold shadow-floating fade-in-section">
+          <!-- Meilleur choix badge -->
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent-gold text-cta-text font-heading text-sm px-5 py-1.5 rounded-full whitespace-nowrap shadow-elevated">
+            ⭐ Meilleur choix
+          </div>
+          <h3 class="font-heading text-[22px] md:text-[26px] leading-[1.2] tracking-[-0.03em] text-text-primary text-center mb-6 mt-2">Toiture en tôle</h3>
+          <dl class="space-y-0">
+            <div class="flex justify-between items-baseline py-3 border-b border-card-border/50">
+              <dt class="text-text-secondary text-sm">Coût initial</dt>
+              <dd class="font-heading text-text-primary text-right">~25 000$</dd>
+            </div>
+            <div class="flex justify-between items-baseline py-3 border-b border-card-border/50">
+              <dt class="text-text-secondary text-sm">Durée de vie</dt>
+              <dd class="font-heading text-[#16A34A] text-right font-semibold">50+ ans</dd>
+            </div>
+            <div class="flex justify-between items-baseline py-3 border-b border-card-border/50">
+              <dt class="text-text-secondary text-sm">Remplacements sur 40 ans</dt>
+              <dd class="font-heading text-[#16A34A] text-right font-semibold">0</dd>
+            </div>
+            <div class="flex justify-between items-baseline py-3 border-b border-card-border/50">
+              <dt class="text-text-secondary text-sm">Coût total sur 40 ans</dt>
+              <dd class="font-heading text-[#16A34A] text-right text-lg font-semibold">~25 000$</dd>
+            </div>
+            <div class="flex justify-between items-baseline py-3 border-b border-card-border/50">
+              <dt class="text-text-secondary text-sm">Entretien annuel</dt>
+              <dd class="font-heading text-[#16A34A] text-right font-semibold">Aucun</dd>
+            </div>
+            <div class="flex justify-between items-baseline py-3">
+              <dt class="text-text-secondary text-sm">Résistance aux vents</dt>
+              <dd class="font-heading text-[#16A34A] text-right font-semibold">200 km/h</dd>
+            </div>
+          </dl>
+        </div>
+
+      </div>
+      <p class="text-center text-lg md:text-xl font-heading text-text-primary mt-8 md:mt-10 fade-in-section">
+        Un toit de tôle, c'est payer une fois et ne plus jamais y penser.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 5: SOLUTION + FEATURES — bg #FFFFFF  -->
+  <!-- ============================================ -->
+  <section class="bg-bg-main py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading text-[26px] md:text-[36px] leading-[1.2] tracking-[-0.03em] text-text-primary text-center fade-in-section">
+        Nos toitures en tôle — Tôle d'acier allemand, fabriquée sur mesure à Montréal
+      </h2>
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8 mt-10 md:mt-12 max-w-4xl mx-auto">
+
+        <!-- Card 1: Standing seam -->
+        <div class="bg-white rounded-card overflow-hidden shadow-elevated border border-card-border/50 hover:shadow-floating transition-shadow duration-300 fade-in-section">
+          <img
+            src="public/images/joint-debout-800w.webp"
+            srcset="public/images/joint-debout-400w.webp 400w, public/images/joint-debout-800w.webp 800w"
+            sizes="(max-width: 768px) 100vw, 400px"
+            alt="Tôle à joints debout"
+            width="800" height="448"
+            loading="lazy"
+            class="w-full h-56 md:h-64 object-cover">
+          <div class="p-6">
+            <h3 class="font-heading text-[18px] md:text-[22px] leading-[1.2] tracking-[-0.03em] text-text-primary mb-3 text-center md:text-left">
+              Tôle à joints debout
+            </h3>
+            <p class="text-text-secondary leading-[1.7] text-[15px]">
+              La tôle de toiture par excellence. Joints surélevés pour une étanchéité parfaite. Aucune vis exposée. Look contemporain et épuré.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2: Tuiles métalliques -->
+        <div class="bg-white rounded-card overflow-hidden shadow-elevated border border-card-border/50 hover:shadow-floating transition-shadow duration-300 fade-in-section">
+          <img
+            src="public/images/tuiles-metalliques-800w.webp"
+            srcset="public/images/tuiles-metalliques-400w.webp 400w, public/images/tuiles-metalliques-800w.webp 800w"
+            sizes="(max-width: 768px) 100vw, 400px"
+            alt="Tuiles de tôle"
+            width="800" height="450"
+            loading="lazy"
+            class="w-full h-56 md:h-64 object-cover">
+          <div class="p-6">
+            <h3 class="font-heading text-[18px] md:text-[22px] leading-[1.2] tracking-[-0.03em] text-text-primary mb-3 text-center md:text-left">
+              Tuiles de tôle
+            </h3>
+            <p class="text-text-secondary leading-[1.7] text-[15px]">
+              L'apparence d'un toit traditionnel en bardeaux, mais en tôle d'acier. Combine l'esthétique classique avec la durabilité de la tôle.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 6: PROCESS — bg #F0F4FA             -->
+  <!-- ============================================ -->
+  <section class="bg-bg-alt py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading text-[26px] md:text-[36px] leading-[1.2] tracking-[-0.03em] text-text-primary text-center fade-in-section">
+        Votre nouveau toit de tôle en 4 étapes simples
+      </h2>
+      <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-4 mt-10 md:mt-12">
+
+        <!-- Step 1 -->
+        <div class="flex-1 text-center fade-in-section">
+          <div class="w-10 h-10 rounded-full bg-cta text-cta-text font-heading text-lg flex items-center justify-center mx-auto mb-4">1</div>
+          <i data-lucide="clipboard-list" class="w-8 h-8 mx-auto text-text-secondary mb-3"></i>
+          <h3 class="font-heading text-[18px] md:text-[20px] leading-[1.2] tracking-[-0.03em] text-text-primary mb-2">Soumission gratuite sur place</h3>
+          <p class="text-text-secondary text-sm leading-[1.7]">Un de nos experts tôle se déplace chez vous. Il évalue votre toiture, prend les mesures et vous présente vos options. Sans obligation.</p>
+        </div>
+
+        <!-- Arrow 1 -->
+        <div class="hidden md:flex items-center pt-12 shrink-0">
+          <i data-lucide="chevron-right" class="w-6 h-6 text-text-secondary/40"></i>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex-1 text-center fade-in-section">
+          <div class="w-10 h-10 rounded-full bg-cta text-cta-text font-heading text-lg flex items-center justify-center mx-auto mb-4">2</div>
+          <i data-lucide="file-text" class="w-8 h-8 mx-auto text-text-secondary mb-3"></i>
+          <h3 class="font-heading text-[18px] md:text-[20px] leading-[1.2] tracking-[-0.03em] text-text-primary mb-2">Votre proposition détaillée</h3>
+          <p class="text-text-secondary text-sm leading-[1.7]">Prix exact, type de tôle, couleur, calendrier d'installation et détails de la garantie 50 ans. Tout est clair, pas de frais cachés.</p>
+        </div>
+
+        <!-- Arrow 2 -->
+        <div class="hidden md:flex items-center pt-12 shrink-0">
+          <i data-lucide="chevron-right" class="w-6 h-6 text-text-secondary/40"></i>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex-1 text-center fade-in-section">
+          <div class="w-10 h-10 rounded-full bg-cta text-cta-text font-heading text-lg flex items-center justify-center mx-auto mb-4">3</div>
+          <i data-lucide="wrench" class="w-8 h-8 mx-auto text-text-secondary mb-3"></i>
+          <h3 class="font-heading text-[18px] md:text-[20px] leading-[1.2] tracking-[-0.03em] text-text-primary mb-2">Fabrication de votre tôle sur mesure</h3>
+          <p class="text-text-secondary text-sm leading-[1.7]">Votre tôle de toiture est coupée et profilée sur mesure dans notre atelier montréalais. Acier allemand G90 — le meilleur sur le marché.</p>
+        </div>
+
+        <!-- Arrow 3 -->
+        <div class="hidden md:flex items-center pt-12 shrink-0">
+          <i data-lucide="chevron-right" class="w-6 h-6 text-text-secondary/40"></i>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="flex-1 text-center fade-in-section">
+          <div class="w-10 h-10 rounded-full bg-cta text-cta-text font-heading text-lg flex items-center justify-center mx-auto mb-4">4</div>
+          <i data-lucide="hard-hat" class="w-8 h-8 mx-auto text-text-secondary mb-3"></i>
+          <h3 class="font-heading text-[18px] md:text-[20px] leading-[1.2] tracking-[-0.03em] text-text-primary mb-2">Installation par nos équipes</h3>
+          <p class="text-text-secondary text-sm leading-[1.7]">6 équipes d'installateurs spécialisés en tôle. Aucun sous-traitant. Chantier propre garanti.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 7: TESTIMONIALS — bg #FFFFFF         -->
+  <!-- ============================================ -->
+  <section class="bg-bg-main py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading text-[26px] md:text-[36px] leading-[1.2] tracking-[-0.03em] text-text-primary text-center fade-in-section">
+        Ce que nos clients disent
+      </h2>
+      <!-- Project photos strip -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-8 mb-10 fade-in-section">
+        <img src="public/images/img1.webp" alt="Projet toiture métallique tuiles" width="800" height="450" loading="lazy" class="w-full h-32 md:h-44 object-cover rounded-[12px]">
+        <img src="public/images/img2.webp" alt="Projet toiture tuiles métalliques bordeaux" width="800" height="600" loading="lazy" class="w-full h-32 md:h-44 object-cover rounded-[12px]">
+        <img src="public/images/img3.webp" alt="Projet toiture à joints debout bleue" width="800" height="450" loading="lazy" class="w-full h-32 md:h-44 object-cover rounded-[12px]">
+        <img src="public/images/img4-opt.webp" alt="Projet toiture tuiles métalliques rouges" width="800" height="450" loading="lazy" class="w-full h-32 md:h-44 object-cover rounded-[12px]">
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+
+        <!-- Testimonial 1 -->
+        <div class="bg-white rounded-card p-6 shadow-elevated border border-card-border/50 fade-in-section">
+          <div class="flex gap-0.5 mb-4">
+            <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
+          </div>
+          <p class="text-text-secondary leading-[1.7] italic mb-4">"Je suis très contente du travail effectué, avec l'équipe qui ont travaillé pour l'installation, toujours très attentifs pour résoudre les questions et résoudre les demandes."</p>
+          <p class="font-heading text-text-primary text-sm">Edith Vilalon</p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-white rounded-card p-6 shadow-elevated border border-card-border/50 fade-in-section">
+          <div class="flex gap-0.5 mb-4">
+            <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
+          </div>
+          <p class="text-text-secondary leading-[1.7] italic mb-4">"Une expérience incroyable et professionnelle du début a la fin avec Bill et toute l'équipe. J'ai même référer ma meilleure ami pour faire la même chose que moi."</p>
+          <p class="font-heading text-text-primary text-sm">Ruth Chérubin</p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-white rounded-card p-6 shadow-elevated border border-card-border/50 fade-in-section">
+          <div class="flex gap-0.5 mb-4">
+            <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
+          </div>
+          <p class="text-text-secondary leading-[1.7] italic mb-4">"Totalement satisfait !! Le travail a ete bien fait et dans les délais. Je vous les recommande."</p>
+          <p class="font-heading text-text-primary text-sm">Nicholas Filion</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 8: FAQ — bg #F0F4FA                  -->
+  <!-- ============================================ -->
+  <section class="bg-bg-alt py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading text-[26px] md:text-[36px] leading-[1.2] tracking-[-0.03em] text-text-primary text-center fade-in-section">
+        Questions fréquentes sur la toiture en tôle
+      </h2>
+      <div class="mt-10 space-y-3">
+
+        <!-- FAQ 1 -->
+        <div class="faq-item bg-white rounded-card border border-card-border shadow-elevated overflow-hidden fade-in-section">
+          <button class="faq-trigger w-full flex justify-between items-center p-5 md:p-6 text-left cursor-pointer hover:bg-input-bg transition-colors duration-200" aria-expanded="false">
+            <span class="font-heading text-text-primary text-base md:text-lg leading-snug pr-4">Quel est le prix d'une toiture en tôle au Québec?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-text-secondary transition-transform duration-300"></i>
+          </button>
+          <div class="faq-answer" aria-hidden="true">
+            <div class="px-5 md:px-6 pb-5 md:pb-6">
+              <p class="text-text-secondary leading-[1.7]">Le prix d'un toit en tôle varie entre 20 000$ et 35 000$ pour une maison résidentielle, selon la superficie et le type de tôle choisi. Demandez votre soumission gratuite pour un prix exact.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item bg-white rounded-card border border-card-border shadow-elevated overflow-hidden fade-in-section">
+          <button class="faq-trigger w-full flex justify-between items-center p-5 md:p-6 text-left cursor-pointer hover:bg-input-bg transition-colors duration-200" aria-expanded="false">
+            <span class="font-heading text-text-primary text-base md:text-lg leading-snug pr-4">Est-ce qu'un toit de tôle fait du bruit?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-text-secondary transition-transform duration-300"></i>
+          </button>
+          <div class="faq-answer" aria-hidden="true">
+            <div class="px-5 md:px-6 pb-5 md:pb-6">
+              <p class="text-text-secondary leading-[1.7]">Non. Avec l'isolation et le sous-toit standard, votre toiture en tôle sera aussi silencieuse qu'un toit d'asphalte. C'est un mythe très répandu.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item bg-white rounded-card border border-card-border shadow-elevated overflow-hidden fade-in-section">
+          <button class="faq-trigger w-full flex justify-between items-center p-5 md:p-6 text-left cursor-pointer hover:bg-input-bg transition-colors duration-200" aria-expanded="false">
+            <span class="font-heading text-text-primary text-base md:text-lg leading-snug pr-4">La tôle rouille-t-elle avec le temps?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-text-secondary transition-transform duration-300"></i>
+          </button>
+          <div class="faq-answer" aria-hidden="true">
+            <div class="px-5 md:px-6 pb-5 md:pb-6">
+              <p class="text-text-secondary leading-[1.7]">Notre tôle d'acier G90 est galvanisée et recouverte d'un fini protecteur multicouche. Elle ne rouille pas — c'est d'ailleurs pour ça qu'on la garantit 50 ans.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item bg-white rounded-card border border-card-border shadow-elevated overflow-hidden fade-in-section">
+          <button class="faq-trigger w-full flex justify-between items-center p-5 md:p-6 text-left cursor-pointer hover:bg-input-bg transition-colors duration-200" aria-expanded="false">
+            <span class="font-heading text-text-primary text-base md:text-lg leading-snug pr-4">Combien de temps pour installer un toit de tôle?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-text-secondary transition-transform duration-300"></i>
+          </button>
+          <div class="faq-answer" aria-hidden="true">
+            <div class="px-5 md:px-6 pb-5 md:pb-6">
+              <p class="text-text-secondary leading-[1.7]">3 à 5 jours ouvrables en moyenne. On retire votre ancien toit et installe la tôle neuve dans la même intervention.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item bg-white rounded-card border border-card-border shadow-elevated overflow-hidden fade-in-section">
+          <button class="faq-trigger w-full flex justify-between items-center p-5 md:p-6 text-left cursor-pointer hover:bg-input-bg transition-colors duration-200" aria-expanded="false">
+            <span class="font-heading text-text-primary text-base md:text-lg leading-snug pr-4">Est-ce que la tôle est bonne pour le climat du Québec?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-text-secondary transition-transform duration-300"></i>
+          </button>
+          <div class="faq-answer" aria-hidden="true">
+            <div class="px-5 md:px-6 pb-5 md:pb-6">
+              <p class="text-text-secondary leading-[1.7]">La tôle est le meilleur matériau pour nos hivers. Elle résiste aux cycles gel-dégel, aux vents de 200 km/h, et la neige glisse naturellement — zéro accumulation.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 9: FINAL CTA — bg #FFFFFF            -->
+  <!-- ============================================ -->
+  <section class="bg-bg-main py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-heading text-[26px] md:text-[36px] leading-[1.2] tracking-[-0.03em] text-text-primary fade-in-section">
+        Prêt à passer à la tôle?
+      </h2>
+      <p class="text-text-secondary text-lg mt-4 leading-[1.7] fade-in-section">
+        Soumission gratuite sur place. Appelez ou remplissez le formulaire.
+      </p>
+
+      <!-- Repeated form -->
+      <div class="bg-white shadow-card border border-card-border rounded-card p-6 md:p-8 mt-10 mx-auto max-w-lg text-left fade-in-section">
+        <form class="ghl-form" data-form-id="cta">
+          <!-- Honeypot -->
+          <div style="position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden" aria-hidden="true">
+            <input type="text" name="company_fax_number" tabindex="-1" autocomplete="nope">
+          </div>
+          <div class="space-y-4">
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label for="cta-nom" class="block text-sm font-bold text-text-primary mb-1">Nom complet *</label>
+                <input type="text" id="cta-nom" name="name" required placeholder="Votre nom complet" autocomplete="name" class="ghl-input w-full bg-input-bg border border-input-border rounded-input px-4 py-3 text-base text-text-primary placeholder:text-gray-400 focus:border-cta focus:ring-1 focus:ring-cta transition-colors duration-200">
+                <p class="ghl-error hidden text-[#EE4444] text-xs mt-1 font-medium">Veuillez entrer votre nom</p>
+              </div>
+              <div>
+                <label for="cta-tel" class="block text-sm font-bold text-text-primary mb-1">Téléphone *</label>
+                <input type="tel" id="cta-tel" name="phone" required placeholder="(514) 000-0000" autocomplete="tel" class="ghl-input w-full bg-input-bg border border-input-border rounded-input px-4 py-3 text-base text-text-primary placeholder:text-gray-400 focus:border-cta focus:ring-1 focus:ring-cta transition-colors duration-200">
+                <p class="ghl-error hidden text-[#EE4444] text-xs mt-1 font-medium">Veuillez entrer votre téléphone</p>
+              </div>
+            </div>
+            <div>
+              <label for="cta-email" class="block text-sm font-bold text-text-primary mb-1">Courriel</label>
+              <input type="email" id="cta-email" name="email" placeholder="vous@exemple.com" autocomplete="email" class="ghl-input w-full bg-input-bg border border-input-border rounded-input px-4 py-3 text-base text-text-primary placeholder:text-gray-400 focus:border-cta focus:ring-1 focus:ring-cta transition-colors duration-200">
+            </div>
+            <div>
+              <label for="cta-address" class="block text-sm font-bold text-text-primary mb-1">Adresse *</label>
+              <input type="text" id="cta-address" name="address" required placeholder="Votre adresse complète" autocomplete="street-address" class="ghl-input w-full bg-input-bg border border-input-border rounded-input px-4 py-3 text-base text-text-primary placeholder:text-gray-400 focus:border-cta focus:ring-1 focus:ring-cta transition-colors duration-200">
+              <p class="ghl-error hidden text-[#EE4444] text-xs mt-1 font-medium">Veuillez entrer votre adresse</p>
+            </div>
+            <div>
+              <label for="cta-message" class="block text-sm font-bold text-text-primary mb-1">Décrivez brièvement votre projet</label>
+              <textarea id="cta-message" name="message" placeholder="Type de toit, superficie, urgence..." rows="2" class="ghl-input w-full bg-input-bg border border-input-border rounded-input px-4 py-3 text-base text-text-primary placeholder:text-gray-400 focus:border-cta focus:ring-1 focus:ring-cta transition-colors duration-200 resize-none"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="ghl-submit w-full mt-6 bg-cta text-cta-text font-heading text-xl font-extrabold px-8 py-5 rounded-btn hover:shadow-cta-hover shadow-[0_4px_20px_rgba(250,255,16,0.35)] border border-[#E5E000] transition-shadow duration-200 btn-primary">
+            Obtenir ma soumission gratuite
+          </button>
+          <div class="flex items-center justify-center gap-1.5 mt-3 text-xs text-text-secondary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" width="13" height="13"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            Vos informations restent 100% confidentielles
+          </div>
+        </form>
+      </div>
+
+      <div class="mt-8 fade-in-section">
+        <a href="tel:+15148670787" class="inline-flex items-center gap-3 bg-cta text-cta-text font-heading text-lg md:text-xl px-10 py-5 rounded-pill hover:shadow-cta-hover shadow-elevated transition-shadow duration-200 btn-primary">
+          <i data-lucide="phone" class="w-6 h-6"></i>
+          Appelez maintenant : (514) 867-0787
+        </a>
+      </div>
+
+      <p class="text-sm text-text-secondary mt-6 fade-in-section">
+        Plus de 2 000 toitures en tôle installées depuis 1983. Noté 4.9/5 sur Google.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FOOTER — bg #222222                          -->
+  <!-- ============================================ -->
+  <footer class="bg-black py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-white font-heading text-lg">Toitures Métalliques Montréal</p>
+      <p class="text-[#9CA3AF] text-sm mt-2">RBQ 5836-0504-01</p>
+      <a href="tel:+15148670787" class="text-white text-sm mt-1 inline-block hover:text-cta transition-colors duration-200">(514) 867-0787</a>
+    </div>
+  </footer>
+
+  <!-- ============================================ -->
+  <!-- JAVASCRIPT                                   -->
+  <!-- ============================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize Lucide icons
+      lucide.createIcons();
+
+      // ---- FADE-IN ON SCROLL ----
+      // Elements start visible (no CSS hide). JS adds will-fade to those not yet in viewport,
+      // then the observer reveals them on scroll. Already-visible elements get animated immediately.
+      const fadeEls = document.querySelectorAll('.fade-in-section');
+      const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            fadeObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+      fadeEls.forEach((el, i) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight + 50) {
+          el.classList.add('will-fade', 'is-visible');
+        } else {
+          el.classList.add('will-fade');
+          fadeObserver.observe(el);
+        }
+      });
+
+      // Safety fallback: reveal any still-hidden content after 3s
+      setTimeout(() => {
+        document.querySelectorAll('.will-fade:not(.is-visible)').forEach(el => {
+          el.classList.add('is-visible');
+        });
+      }, 3000);
+
+      // ---- COUNTER ANIMATION ----
+      function animateCounter(el) {
+        if (el.dataset.animated) return;
+        el.dataset.animated = '1';
+        const target = parseFloat(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1500;
+        const isDecimal = target % 1 !== 0;
+        const start = performance.now();
+
+        function update(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const current = eased * target;
+          el.textContent = (isDecimal ? current.toFixed(1) : Math.floor(current)) + suffix;
+          if (progress < 1) requestAnimationFrame(update);
+        }
+        requestAnimationFrame(update);
+      }
+
+      const trustBar = document.querySelector('#trust-bar');
+      if (trustBar) {
+        const counterObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              trustBar.querySelectorAll('.counter').forEach(animateCounter);
+              counterObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
+        counterObserver.observe(trustBar);
+
+        // Fallback: if trust bar is already visible on load, animate immediately
+        const rect = trustBar.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          trustBar.querySelectorAll('.counter').forEach(animateCounter);
+        }
+      }
+
+      // ---- FAQ ACCORDION ----
+      document.querySelectorAll('.faq-trigger').forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          const item = trigger.parentElement;
+          const answer = item.querySelector('.faq-answer');
+          const chevron = trigger.querySelector('.faq-chevron');
+          const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+
+          // Close all other FAQ items
+          document.querySelectorAll('.faq-item').forEach(otherItem => {
+            if (otherItem !== item) {
+              const otherAnswer = otherItem.querySelector('.faq-answer');
+              const otherChevron = otherItem.querySelector('.faq-chevron');
+              const otherTrigger = otherItem.querySelector('.faq-trigger');
+              otherAnswer.style.maxHeight = null;
+              otherAnswer.setAttribute('aria-hidden', 'true');
+              otherChevron.style.transform = '';
+              otherTrigger.setAttribute('aria-expanded', 'false');
+            }
+          });
+
+          // Toggle current item
+          if (!isOpen) {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+            answer.setAttribute('aria-hidden', 'false');
+            chevron.style.transform = 'rotate(180deg)';
+            trigger.setAttribute('aria-expanded', 'true');
+          } else {
+            answer.style.maxHeight = null;
+            answer.setAttribute('aria-hidden', 'true');
+            chevron.style.transform = '';
+            trigger.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+
+      // ---- GHL FORM SUBMISSION ----
+      const GHL_WEBHOOK = 'https://services.leadconnectorhq.com/hooks/AN3Apv5TJLj34yTab7vg/webhook-trigger/d9b89cbe-1ae7-40c4-8b39-021b99a35b21';
+      const REDIRECT_URL = 'https://metalroofmontreal.ca/merci-ad';
+
+      // Source detection (mirrors React component logic)
+      function getTrackingData() {
+        const params = new URLSearchParams(window.location.search);
+        const utmSource = params.get('utm_source') || '';
+        const utmMedium = params.get('utm_medium') || '';
+        const utmCampaign = params.get('utm_campaign') || '';
+        const gclid = params.get('gclid') || '';
+        const referrer = document.referrer || '';
+        const landingPage = window.location.href || '';
+
+        const saved = sessionStorage.getItem('lead_source');
+        if (saved) {
+          return {
+            source: saved,
+            medium: sessionStorage.getItem('lead_medium') || '',
+            campaign: sessionStorage.getItem('lead_campaign') || '',
+            gclid: sessionStorage.getItem('lead_gclid') || '',
+            landing_page: sessionStorage.getItem('lead_landing_page') || '',
+            referrer: sessionStorage.getItem('lead_referrer') || ''
+          };
+        }
+
+        let source = 'Recherche Directe';
+        if (gclid) {
+          source = 'Google Ads';
+        } else if (utmSource) {
+          const med = utmMedium.toLowerCase();
+          if (med === 'cpc' || med === 'ppc' || med === 'paid') source = 'Paid - ' + utmSource;
+          else if (med === 'social' || med === 'paid_social') source = 'Social Paid - ' + utmSource;
+          else source = utmSource + ' / ' + utmMedium;
+        } else if (referrer) {
+          const ref = referrer.toLowerCase();
+          if (ref.includes('metalroofmontreal.ca')) source = 'Recherche Directe - Organic';
+          else if (ref.includes('google.')) source = 'Organic Search - Google';
+          else if (ref.includes('bing.')) source = 'Organic Search - Bing';
+          else if (ref.includes('facebook.') || ref.includes('fb.')) source = 'Social - Facebook';
+          else if (ref.includes('instagram.')) source = 'Social - Instagram';
+          else if (ref.includes('linkedin.')) source = 'Social - LinkedIn';
+          else if (ref.includes('tiktok.')) source = 'Social - TikTok';
+          else { try { source = 'Referral - ' + new URL(referrer).hostname; } catch(e) { source = 'Referral'; } }
+        }
+
+        sessionStorage.setItem('lead_source', source);
+        sessionStorage.setItem('lead_medium', utmMedium);
+        sessionStorage.setItem('lead_campaign', utmCampaign);
+        sessionStorage.setItem('lead_gclid', gclid);
+        sessionStorage.setItem('lead_landing_page', landingPage);
+        sessionStorage.setItem('lead_referrer', referrer);
+
+        return { source, medium: utmMedium, campaign: utmCampaign, gclid, landing_page: landingPage, referrer };
+      }
+
+      const tracking = getTrackingData();
+
+      document.querySelectorAll('.ghl-form').forEach(form => {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+
+          // Honeypot check
+          const honeypot = form.querySelector('[name="company_fax_number"]');
+          if (honeypot && honeypot.value) return;
+
+          // Clear previous errors
+          form.querySelectorAll('.ghl-input').forEach(i => i.classList.remove('input-error'));
+
+          // Validate required fields
+          const name = form.querySelector('[name="name"]');
+          const phone = form.querySelector('[name="phone"]');
+          const address = form.querySelector('[name="address"]');
+          let hasError = false;
+
+          if (!name.value.trim()) { name.classList.add('input-error'); hasError = true; }
+          if (!phone.value.trim()) { phone.classList.add('input-error'); hasError = true; }
+          if (!address.value.trim()) { address.classList.add('input-error'); hasError = true; }
+          if (hasError) return;
+
+          // Disable button
+          const btn = form.querySelector('.ghl-submit');
+          btn.disabled = true;
+          btn.style.opacity = '0.7';
+          btn.style.cursor = 'not-allowed';
+          const originalText = btn.textContent;
+          btn.textContent = 'Envoi en cours...';
+
+          // Build payload
+          const email = form.querySelector('[name="email"]');
+          const message = form.querySelector('[name="message"]');
+
+          const data = {
+            name: name.value.trim(),
+            phone: phone.value.trim(),
+            email: email ? email.value.trim() : '',
+            address: address.value.trim(),
+            message: message ? message.value.trim() : '',
+            language: 'fr',
+            source: tracking.source,
+            utm_medium: tracking.medium,
+            utm_campaign: tracking.campaign,
+            gclid: tracking.gclid,
+            landing_page: tracking.landing_page,
+            referrer: tracking.referrer
+          };
+
+          try {
+            await fetch(GHL_WEBHOOK, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data)
+            });
+          } catch (err) {
+            console.error('GHL webhook failed:', err);
+          }
+
+          // DataLayer push for GTM
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ event: 'form_submit_lead' });
+
+          // Redirect
+          setTimeout(() => { window.location.href = REDIRECT_URL; }, 500);
+        });
+
+        // Clear error on input
+        form.querySelectorAll('.ghl-input[required]').forEach(input => {
+          input.addEventListener('input', () => input.classList.remove('input-error'));
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
