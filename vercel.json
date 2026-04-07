@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/lp-eng", "destination": "/lp-anglo.html" },
+    { "source": "/lp-acier", "destination": "/lp-acier.html" },
+    { "source": "/lp-metallique", "destination": "/lp-metallique.html" },
+    { "source": "/lp-tole", "destination": "/lp-tole.html" }
+  ]
+}

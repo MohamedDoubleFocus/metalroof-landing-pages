@@ -50,13 +50,20 @@
   </script>
   <style>
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; padding-top: 64px; }
-    @media (min-width: 768px) { body { padding-top: 72px; } }
+    body { font-family: 'Inter', sans-serif; padding-top: 72px; }
+    @media (min-width: 768px) { body { padding-top: 80px; } }
 
-    .logo-header { max-height: 52px; width: auto; filter: drop-shadow(0 1px 3px rgba(0,0,0,0.5)); }
-    @media (max-width: 767px) { .logo-header { max-height: 44px; } }
+    .logo-header { max-height: 70px; width: auto; filter: drop-shadow(0 1px 3px rgba(0,0,0,0.5)); }
+    @media (max-width: 767px) { .logo-header { max-height: 56px; } }
     .hero-h1 { text-shadow: 2px 2px 10px rgba(0,0,0,0.9); }
     .hero-sub { text-shadow: 1px 1px 6px rgba(0,0,0,0.8); }
+
+    @keyframes phoneGlow {
+      0% { box-shadow: 0 0 0 0 rgba(250,255,16,0.6); }
+      70% { box-shadow: 0 0 0 12px rgba(250,255,16,0); }
+      100% { box-shadow: 0 0 0 0 rgba(250,255,16,0); }
+    }
+    .phone-glow { animation: phoneGlow 2s infinite; }
 
     .will-fade {
       opacity: 0;
@@ -99,18 +106,18 @@
   <!-- STICKY HEADER                                -->
   <!-- ============================================ -->
   <header class="fixed top-0 left-0 w-full z-50 bg-black">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-[72px] flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] md:h-20 flex items-center justify-between">
       <!-- Logo -->
       <a href="#" class="shrink-0">
-        <img src="public/images/logo.avif" alt="Toitures Métalliques Montréal" width="512" height="312" class="logo-header w-[140px] md:w-[200px] object-contain">
+        <img src="public/images/logo.webp" alt="Toitures Métalliques Montréal" width="512" height="312" class="logo-header w-[150px] md:w-[220px] object-contain">
       </a>
       <!-- Phone pill — desktop -->
-      <a href="tel:+15148670787" class="hidden md:inline-flex items-center gap-2 bg-cta text-cta-text font-heading text-xl font-bold px-8 py-4 rounded-pill hover:shadow-cta-hover shadow-[0_2px_12px_rgba(250,255,16,0.3)] border border-[#E5E000] transition-shadow duration-200">
+      <a href="tel:+15148670787" class="hidden md:inline-flex items-center gap-2 bg-cta text-cta-text font-heading text-xl font-bold px-8 py-4 rounded-pill phone-glow border border-[#E5E000]">
         <i data-lucide="phone" class="w-5 h-5"></i>
         (514) 867-0787
       </a>
       <!-- Phone pill — mobile -->
-      <a href="tel:+15148670787" class="md:hidden inline-flex items-center gap-2 bg-cta text-cta-text font-heading text-[16px] font-semibold px-5 py-3 rounded-pill hover:shadow-cta-hover shadow-[0_2px_12px_rgba(250,255,16,0.3)] border border-[#E5E000] transition-shadow duration-200">
+      <a href="tel:+15148670787" class="md:hidden inline-flex items-center gap-2 bg-cta text-cta-text font-heading text-[16px] font-semibold px-5 py-3 rounded-pill phone-glow border border-[#E5E000]">
         <i data-lucide="phone" class="w-5 h-5"></i>
         (514) 867-0787
       </a>
@@ -135,31 +142,30 @@
 
       <!-- LEFT: Text -->
       <div class="fade-in-section text-center lg:text-left">
-        <h1 class="font-heading text-3xl md:text-4xl leading-[1.2] tracking-[-0.03em] text-white font-bold hero-h1">
+        <h1 class="font-heading text-4xl md:text-6xl leading-tight tracking-[-0.03em] text-white font-black hero-h1">
           Toiture en Tôle à Montréal — Économisez jusqu'à <span class="text-cta">4 000$</span>
         </h1>
-        <p class="text-white/90 text-base md:text-lg mt-4 leading-[1.7] hero-sub">
+<p class="text-white/90 text-sm md:text-lg mt-4 leading-[1.5] hero-sub">
           Tôle acier calibre 25 · Résiste à 60 ans de neige · Installation en 1-2 jours · Soumission 100% gratuite
         </p>
     <div class="mt-5 inline-flex items-center gap-2 bg-[#0F172A] text-white rounded-btn px-4 py-2.5">
   <span class="flex-shrink-0">⚡</span>
   <span class="text-xs md:text-base font-heading font-bold">Offre printemps — Économisez 4 000$ | <span class="fomo-pulse">15 places restantes</span></span>
 </div>
-        <!-- Desktop: phone only (form is already visible on the right) -->
-        <div class="hidden lg:flex mt-6 items-center gap-4">
-          <a href="tel:+15148670787" class="inline-flex items-center gap-2 bg-cta text-cta-text font-heading text-xl font-bold px-8 py-4 rounded-pill hover:shadow-cta-hover shadow-[0_2px_12px_rgba(250,255,16,0.3)] border border-[#E5E000] transition-shadow duration-200 btn-primary">
-            <i data-lucide="phone" class="w-6 h-6"></i>
-            (514) 867-0787
-          </a>
+        
+              <!-- Before / After -->
+        <div class="mt-6 flex rounded-xl overflow-hidden border border-white/10">
+          <div class="relative w-1/2">
+            <img src="public/images/before.webp" alt="Avant — toit en asphalte" width="600" height="400" loading="lazy" class="w-full h-48 md:h-64 object-cover">
+            <span class="absolute top-2 left-2 bg-black/70 text-white text-sm font-bold px-3 py-1 rounded">AVANT</span>
+          </div>
+          <div class="w-px bg-white/40 shrink-0"></div>
+          <div class="relative w-1/2">
+            <img src="public/images/after.webp" alt="Après — toiture métallique installée" width="600" height="480" loading="lazy" class="w-full h-48 md:h-64 object-cover">
+            <span class="absolute top-2 left-2 bg-black/70 text-white text-sm font-bold px-3 py-1 rounded">APRÈS</span>
+          </div>
         </div>
-        <!-- Mobile: phone only -->
-        <div class="flex lg:hidden mt-6 justify-center">
-          <a href="tel:+15148670787" class="inline-flex items-center gap-2 bg-cta text-cta-text font-heading text-xl font-bold px-8 py-4 rounded-pill hover:shadow-cta-hover shadow-[0_2px_12px_rgba(250,255,16,0.3)] border border-[#E5E000] transition-shadow duration-200 btn-primary">
-            <i data-lucide="phone" class="w-6 h-6"></i>
-            (514) 867-0787
-          </a>
-        </div>
-      </div>
+</div>
 
       <!-- RIGHT: Form Card -->
       <div id="hero-form" class="mt-8 lg:mt-0 fade-in-section">
@@ -247,28 +253,28 @@
             <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
             <i data-lucide="star" class="w-5 h-5 fill-accent-gold text-accent-gold"></i>
           </div>
-          <span class="block font-heading text-[28px] md:text-[32px] text-text-primary counter-value">
+          <span class="block font-heading text-4xl md:text-5xl text-text-primary counter-value">
             <span class="counter" data-target="4.9" data-suffix="/5">0</span>
           </span>
           <span class="text-sm text-text-secondary">sur Google</span>
         </div>
         <!-- Stat 2: Roofs installed -->
         <div>
-          <span class="block font-heading text-[28px] md:text-[32px] text-text-primary counter-value">
+          <span class="block font-heading text-4xl md:text-5xl text-text-primary counter-value">
             <span class="counter" data-target="2000" data-suffix="+">0</span>
           </span>
           <span class="text-sm text-text-secondary">toitures en tôle installées</span>
         </div>
         <!-- Stat 3: Since 1983 -->
         <div>
-          <span class="block font-heading text-[28px] md:text-[32px] text-text-primary counter-value">
+          <span class="block font-heading text-4xl md:text-5xl text-text-primary counter-value">
             Depuis <span class="counter" data-target="1983" data-suffix="">0</span>
           </span>
           <span class="text-sm text-text-secondary">Entrepreneur toiture tôle</span>
         </div>
         <!-- Stat 4: Teams -->
         <div>
-          <span class="block font-heading text-[28px] md:text-[32px] text-text-primary counter-value">
+          <span class="block font-heading text-4xl md:text-5xl text-text-primary counter-value">
             <span class="counter" data-target="6" data-suffix="">0</span> équipes
           </span>
           <span class="text-sm text-text-secondary">Zéro sous-traitant</span>
@@ -290,7 +296,7 @@
   <!-- ============================================ -->
   <section class="bg-bg-main py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="font-heading text-[26px] md:text-[36px] leading-[1.2] tracking-[-0.03em] text-text-primary text-center fade-in-section">
+      <h2 class="font-heading text-3xl md:text-4xl leading-[1.2] tracking-[-0.03em] text-text-primary text-center fade-in-section">
         Votre toit montre des signes d'usure? Voici ce que ça vous coûte d'attendre.
       </h2>
       <div class="grid md:grid-cols-2 gap-6 md:gap-8 mt-10 md:mt-12">
@@ -344,7 +350,7 @@
   <!-- ============================================ -->
   <section class="bg-bg-alt py-16 md:py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="font-heading text-[26px] md:text-[36px] leading-[1.2] tracking-[-0.03em] text-text-primary text-center fade-in-section">
+      <h2 class="font-heading text-3xl md:text-4xl leading-[1.2] tracking-[-0.03em] text-text-primary text-center fade-in-section">
         Asphalte vs Tôle : le vrai coût sur 40 ans
       </h2>
       <div class="grid md:grid-cols-2 gap-6 md:gap-8 mt-10 md:mt-12">
@@ -427,7 +433,7 @@
   <!-- ============================================ -->
   <section class="bg-bg-main py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="font-heading text-[26px] md:text-[36px] leading-[1.2] tracking-[-0.03em] text-text-primary text-center fade-in-section">
+      <h2 class="font-heading text-3xl md:text-4xl leading-[1.2] tracking-[-0.03em] text-text-primary text-center fade-in-section">
         Nos toitures en tôle — Tôle d'acier allemand, fabriquée sur mesure à Montréal
       </h2>
       <div class="grid md:grid-cols-2 gap-6 md:gap-8 mt-10 md:mt-12 max-w-4xl mx-auto">
@@ -481,7 +487,7 @@
   <!-- ============================================ -->
   <section class="bg-bg-alt py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="font-heading text-[26px] md:text-[36px] leading-[1.2] tracking-[-0.03em] text-text-primary text-center fade-in-section">
+      <h2 class="font-heading text-3xl md:text-4xl leading-[1.2] tracking-[-0.03em] text-text-primary text-center fade-in-section">
         Votre nouveau toit de tôle en 4 étapes simples
       </h2>
       <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-4 mt-10 md:mt-12">
@@ -542,7 +548,7 @@
   <!-- ============================================ -->
   <section class="bg-bg-main py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="font-heading text-[26px] md:text-[36px] leading-[1.2] tracking-[-0.03em] text-text-primary text-center fade-in-section">
+      <h2 class="font-heading text-3xl md:text-4xl leading-[1.2] tracking-[-0.03em] text-text-primary text-center fade-in-section">
         Ce que nos clients disent
       </h2>
       <!-- Project photos strip -->
@@ -602,7 +608,7 @@
   <!-- ============================================ -->
   <section class="bg-bg-alt py-16 md:py-20">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="font-heading text-[26px] md:text-[36px] leading-[1.2] tracking-[-0.03em] text-text-primary text-center fade-in-section">
+      <h2 class="font-heading text-3xl md:text-4xl leading-[1.2] tracking-[-0.03em] text-text-primary text-center fade-in-section">
         Questions fréquentes sur la toiture en tôle
       </h2>
       <div class="mt-10 space-y-3">
@@ -681,7 +687,7 @@
   <!-- ============================================ -->
   <section class="bg-bg-main py-16 md:py-20">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-heading text-[26px] md:text-[36px] leading-[1.2] tracking-[-0.03em] text-text-primary fade-in-section">
+      <h2 class="font-heading text-3xl md:text-4xl leading-[1.2] tracking-[-0.03em] text-text-primary fade-in-section">
         Prêt à passer à la tôle?
       </h2>
       <p class="text-text-secondary text-lg mt-4 leading-[1.7] fade-in-section">
