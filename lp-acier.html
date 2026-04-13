@@ -9,18 +9,22 @@
   })(window,document,'script','dataLayer','GTM-NRT83SSC');</script>
 
   <!-- CallRail -->
-  <script type="text/javascript" src="https://cdn.callrail.com/companies/787435474/ec3008d602f5e2834eb1/12/swap.js"></script>
+  <script async type="text/javascript" src="//cdn.callrail.com/companies/787435474/ec3008d602f5e2834eb1/12/swap.js"></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Toiture en Acier Montréal — Économisez jusqu'à 4 000$ | Toitures Métalliques Montréal</title>
   <meta name="description" content="Toiture en acier à Montréal depuis 1983. Résiste à la neige, au verglas, aux vents. Garantie 50 ans. Soumission 100% gratuite. RBQ 5836-0504-01.">
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+  <link rel="dns-prefetch" href="https://unpkg.com">
+  <link rel="dns-prefetch" href="https://cdn.callrail.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@600;700&family=Inter:wght@400&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Figtree:wght@600;700&family=Inter:wght@400&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@600;700&family=Inter:wght@400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <link rel="preload" as="image" href="public/images/hero-1200w.webp" imagesrcset="public/images/hero-480w.webp 480w, public/images/hero-768w.webp 768w, public/images/hero-1200w.webp 1200w, public/images/hero-1920w.webp 1920w" imagesizes="100vw">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script defer src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -163,12 +167,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- Before / After -->
         <div class="mt-6 flex rounded-xl overflow-hidden border border-white/10">
           <div class="relative w-1/2">
-            <img src="public/images/before.webp" alt="Avant — toit en asphalte" width="600" height="400" loading="lazy" class="w-full h-48 md:h-64 object-cover">
+            <img src="public/images/before.webp" alt="Avant — toit en asphalte" width="600" height="400" loading="lazy" decoding="async" class="w-full h-48 md:h-64 object-cover">
             <span class="absolute top-2 left-2 bg-black/70 text-white text-sm font-bold px-3 py-1 rounded">AVANT</span>
           </div>
           <div class="w-px bg-white/40 shrink-0"></div>
           <div class="relative w-1/2">
-            <img src="public/images/after.webp" alt="Après — toiture métallique installée" width="600" height="480" loading="lazy" class="w-full h-48 md:h-64 object-cover">
+            <img src="public/images/after.webp" alt="Après — toiture métallique installée" width="600" height="480" loading="lazy" decoding="async" class="w-full h-48 md:h-64 object-cover">
             <span class="absolute top-2 left-2 bg-black/70 text-white text-sm font-bold px-3 py-1 rounded">APRÈS</span>
           </div>
         </div>
@@ -227,16 +231,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <p class="text-xs text-text-secondary mt-0.5 font-heading font-bold">4.9/5 — Plus de 50 avis Google</p>
           </div>
-          <div class="flex flex-wrap gap-2 mt-3 justify-center">
-            <span class="inline-flex items-center gap-1.5 text-xs text-text-secondary border border-card-border rounded-full px-3 py-1.5">
-              <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> RBQ 5836-0504-01
-            </span>
-            <span class="inline-flex items-center gap-1.5 text-xs text-text-secondary border border-card-border rounded-full px-3 py-1.5">
-              <i data-lucide="award" class="w-3.5 h-3.5"></i> APCHQ
-            </span>
-            <span class="inline-flex items-center gap-1.5 text-xs text-text-secondary border border-card-border rounded-full px-3 py-1.5">
-              <i data-lucide="hard-hat" class="w-3.5 h-3.5"></i> CNESST
-            </span>
+          <div class="flex flex-wrap gap-4 mt-4 justify-center items-center">
+            <img src="public/images/rbq-final.webp" alt="RBQ 5836-0504-01" class="h-16 object-contain">
+            <img src="public/images/apchq-logo-dark.webp" alt="APCHQ" class="h-10 object-contain">
+            <img src="public/images/cnesst-logo.avif" alt="CNESST" class="h-10 object-contain">
+            <img src="public/images/google-reviews.webp" alt="Google Reviews" class="h-12 object-contain">
           </div>
         </div>
       </div>
@@ -293,6 +292,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <span class="block font-heading text-base text-text-primary">RBQ | APCHQ | CNESST</span>
           <span class="text-sm text-text-secondary">Licence complète</span>
+        </div>
+      </div>
+      <div class="text-center mt-10 fade-in-section"><a href="#hero-form" class="inline-block bg-cta text-cta-text font-heading text-lg font-bold px-8 py-4 rounded-btn hover:shadow-cta-hover shadow-[0_4px_20px_rgba(250,255,16,0.35)] border border-[#E5E000] transition-shadow duration-200 btn-primary">Obtenez votre soumission gratuite</a></div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CREDENTIAL BADGES BAR                        -->
+  <!-- ============================================ -->
+  <section class="bg-white py-8 md:py-10 border-y border-card-border/30">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:flex md:flex-wrap md:justify-center items-center gap-8 md:gap-12 justify-items-center">
+        <img src="public/images/rbq-final.webp" alt="RBQ 5836-0504-01" class="h-20 md:h-24 object-contain">
+        <img src="public/images/apchq-logo-dark.webp" alt="APCHQ" class="h-12 md:h-14 object-contain">
+        <img src="public/images/cnesst-logo.avif" alt="CNESST" class="h-12 md:h-14 object-contain">
+        <img src="public/images/google-reviews.webp" alt="Google Reviews 4.9/5" class="h-14 md:h-18 object-contain">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- GUARANTEE BAR — bg #FFFFFF                   -->
+  <!-- ============================================ -->
+  <section class="bg-bg-main py-10 md:py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+      <div class="flex flex-col md:flex-row md:justify-center gap-6 md:gap-10 text-center">
+        <div class="flex items-center justify-center gap-3">
+          <i data-lucide="shield-check" class="w-7 h-7 text-[#16A34A] shrink-0"></i>
+          <span class="font-heading text-text-primary text-sm md:text-base">Matériaux premium de grade allemand</span>
+        </div>
+        <div class="flex items-center justify-center gap-3">
+          <i data-lucide="badge-check" class="w-7 h-7 text-[#16A34A] shrink-0"></i>
+          <span class="font-heading text-text-primary text-sm md:text-base">Installation certifiée selon les normes du fabricant</span>
+        </div>
+        <div class="flex items-center justify-center gap-3">
+          <i data-lucide="umbrella" class="w-7 h-7 text-[#16A34A] shrink-0"></i>
+          <span class="font-heading text-text-primary text-sm md:text-base">Entièrement assuré</span>
         </div>
       </div>
     </div>
@@ -359,6 +395,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
       </div>
+      <div class="text-center mt-10 fade-in-section"><a href="#hero-form" class="inline-block bg-cta text-cta-text font-heading text-lg font-bold px-8 py-4 rounded-btn hover:shadow-cta-hover shadow-[0_4px_20px_rgba(250,255,16,0.35)] border border-[#E5E000] transition-shadow duration-200 btn-primary">Parlez à un expert</a></div>
     </div>
   </section>
 
@@ -442,6 +479,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="text-center text-lg md:text-xl font-heading text-text-primary mt-8 md:mt-10 fade-in-section">
         L'acier coûte plus au départ, mais c'est le choix le moins cher à long terme.
       </p>
+      <div class="text-center mt-10 fade-in-section"><a href="#hero-form" class="inline-block bg-cta text-cta-text font-heading text-lg font-bold px-8 py-4 rounded-btn hover:shadow-cta-hover shadow-[0_4px_20px_rgba(250,255,16,0.35)] border border-[#E5E000] transition-shadow duration-200 btn-primary">Obtenez votre prix</a></div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- GALLERY — bg #F0F4FA                         -->
+  <!-- ============================================ -->
+  <section class="bg-bg-alt py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading text-3xl md:text-4xl leading-[1.2] tracking-[-0.03em] text-text-primary text-center fade-in-section">
+        Nos réalisations
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mt-10 fade-in-section">
+        <div class="overflow-hidden rounded-card group">
+          <img src="public/images/galerie/1.webp" alt="Projet toiture acier" loading="lazy" decoding="async" class="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="overflow-hidden rounded-card group">
+          <img src="public/images/galerie/12.webp" alt="Installation toiture acier" loading="lazy" decoding="async" class="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="overflow-hidden rounded-card group">
+          <img src="public/images/galerie/107.webp" alt="Toiture acier résidentielle" loading="lazy" decoding="async" class="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="overflow-hidden rounded-card group">
+          <img src="public/images/galerie/120.webp" alt="Projet toiture acier à joints debout" loading="lazy" decoding="async" class="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="overflow-hidden rounded-card group">
+          <img src="public/images/galerie/125.webp" alt="Toiture acier Montréal" loading="lazy" decoding="async" class="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="overflow-hidden rounded-card group">
+          <img src="public/images/galerie/130.webp" alt="Installation toiture acier" loading="lazy" decoding="async" class="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+      </div>
+      <div class="text-center mt-10 fade-in-section">
+        <a href="#hero-form" class="inline-block bg-cta text-cta-text font-heading text-lg font-bold px-8 py-4 rounded-btn hover:shadow-cta-hover shadow-[0_4px_20px_rgba(250,255,16,0.35)] border border-[#E5E000] transition-shadow duration-200 btn-primary">Obtenez votre soumission gratuite</a>
+      </div>
     </div>
   </section>
 
@@ -496,6 +568,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
       </div>
+      <div class="text-center mt-10 fade-in-section"><a href="#hero-form" class="inline-block bg-cta text-cta-text font-heading text-lg font-bold px-8 py-4 rounded-btn hover:shadow-cta-hover shadow-[0_4px_20px_rgba(250,255,16,0.35)] border border-[#E5E000] transition-shadow duration-200 btn-primary">Demandez une estimation</a></div>
     </div>
   </section>
 
@@ -557,6 +630,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
       </div>
+      <div class="text-center mt-10 fade-in-section"><a href="#hero-form" class="inline-block bg-cta text-cta-text font-heading text-lg font-bold px-8 py-4 rounded-btn hover:shadow-cta-hover shadow-[0_4px_20px_rgba(250,255,16,0.35)] border border-[#E5E000] transition-shadow duration-200 btn-primary">Planifiez votre installation</a></div>
     </div>
   </section>
 
@@ -570,10 +644,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </h2>
       <!-- Project photos strip -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-8 mb-10 fade-in-section">
-        <img src="public/images/img1.webp" alt="Projet toiture métallique tuiles" width="800" height="450" loading="lazy" class="w-full h-32 md:h-44 object-cover rounded-[12px]">
-        <img src="public/images/img2.webp" alt="Projet toiture tuiles métalliques bordeaux" width="800" height="600" loading="lazy" class="w-full h-32 md:h-44 object-cover rounded-[12px]">
-        <img src="public/images/img3.webp" alt="Projet toiture à joints debout bleue" width="800" height="450" loading="lazy" class="w-full h-32 md:h-44 object-cover rounded-[12px]">
-        <img src="public/images/img4-opt.webp" alt="Projet toiture tuiles métalliques rouges" width="800" height="450" loading="lazy" class="w-full h-32 md:h-44 object-cover rounded-[12px]">
+        <img src="public/images/img1.webp" alt="Projet toiture métallique tuiles" width="800" height="450" loading="lazy" decoding="async" class="w-full h-32 md:h-44 object-cover rounded-[12px]">
+        <img src="public/images/img2.webp" alt="Projet toiture tuiles métalliques bordeaux" width="800" height="600" loading="lazy" decoding="async" class="w-full h-32 md:h-44 object-cover rounded-[12px]">
+        <img src="public/images/img3.webp" alt="Projet toiture à joints debout bleue" width="800" height="450" loading="lazy" decoding="async" class="w-full h-32 md:h-44 object-cover rounded-[12px]">
+        <img src="public/images/img4-opt.webp" alt="Projet toiture tuiles métalliques rouges" width="800" height="450" loading="lazy" decoding="async" class="w-full h-32 md:h-44 object-cover rounded-[12px]">
       </div>
       <div class="grid md:grid-cols-3 gap-6 md:gap-8">
 
@@ -696,6 +770,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
       </div>
+      <div class="text-center mt-10 fade-in-section"><a href="#hero-form" class="inline-block bg-cta text-cta-text font-heading text-lg font-bold px-8 py-4 rounded-btn hover:shadow-cta-hover shadow-[0_4px_20px_rgba(250,255,16,0.35)] border border-[#E5E000] transition-shadow duration-200 btn-primary">Obtenez votre soumission gratuite</a></div>
     </div>
   </section>
 
@@ -776,6 +851,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="text-white font-heading text-lg">Toitures Métalliques Montréal</p>
       <p class="text-[#9CA3AF] text-sm mt-2">RBQ 5836-0504-01</p>
       <a href="tel:5148670787" class="text-white text-sm mt-1 inline-block hover:text-cta transition-colors duration-200">(514) 867-0787</a>
+      <div class="flex flex-wrap gap-4 mt-4 justify-center items-center opacity-70">
+        <img src="public/images/rbq-final.webp" alt="RBQ" class="h-10 object-contain brightness-0 invert">
+        <img src="public/images/apchq-logo-dark.webp" alt="APCHQ" class="h-10 object-contain brightness-0 invert">
+        <img src="public/images/cnesst-logo.avif" alt="CNESST" class="h-8 object-contain brightness-0 invert">
+      </div>
     </div>
   </footer>
 

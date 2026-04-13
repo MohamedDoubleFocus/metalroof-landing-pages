@@ -4,7 +4,7 @@ import { join, extname } from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
-const PORT = 3000;
+const PORT = 3001;
 
 const MIME = {
   ".html": "text/html",
@@ -22,6 +22,7 @@ const MIME = {
   ".woff2": "font/woff2",
   ".ttf": "font/ttf",
   ".webp": "image/webp",
+  ".avif": "image/avif",
   ".mp4": "video/mp4",
   ".webm": "video/webm",
 };
