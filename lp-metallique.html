@@ -931,6 +931,7 @@ Plus de 2 000 toits installés · Garantie 50 ans · Soumission 100% gratuite su
         const utmMedium = params.get('utm_medium') || '';
         const utmCampaign = params.get('utm_campaign') || '';
         const gclid = params.get('gclid') || '';
+        const msclkid = params.get('msclkid') || '';
         const referrer = document.referrer || '';
         const landingPage = window.location.href || '';
 
@@ -941,6 +942,7 @@ Plus de 2 000 toits installés · Garantie 50 ans · Soumission 100% gratuite su
             medium: sessionStorage.getItem('lead_medium') || '',
             campaign: sessionStorage.getItem('lead_campaign') || '',
             gclid: sessionStorage.getItem('lead_gclid') || '',
+            msclkid: sessionStorage.getItem('lead_msclkid') || '',
             landing_page: sessionStorage.getItem('lead_landing_page') || '',
             referrer: sessionStorage.getItem('lead_referrer') || ''
           };
@@ -949,6 +951,8 @@ Plus de 2 000 toits installés · Garantie 50 ans · Soumission 100% gratuite su
         let source = 'Recherche Directe';
         if (gclid) {
           source = 'Google Ads';
+        } else if (msclkid) {
+          source = 'Microsoft Ads';
         } else if (utmSource) {
           const med = utmMedium.toLowerCase();
           if (med === 'cpc' || med === 'ppc' || med === 'paid') source = 'Paid - ' + utmSource;
@@ -970,10 +974,11 @@ Plus de 2 000 toits installés · Garantie 50 ans · Soumission 100% gratuite su
         sessionStorage.setItem('lead_medium', utmMedium);
         sessionStorage.setItem('lead_campaign', utmCampaign);
         sessionStorage.setItem('lead_gclid', gclid);
+        sessionStorage.setItem('lead_msclkid', msclkid);
         sessionStorage.setItem('lead_landing_page', landingPage);
         sessionStorage.setItem('lead_referrer', referrer);
 
-        return { source, medium: utmMedium, campaign: utmCampaign, gclid, landing_page: landingPage, referrer };
+        return { source, medium: utmMedium, campaign: utmCampaign, gclid, msclkid, landing_page: landingPage, referrer };
       }
 
       const tracking = getTrackingData();
@@ -1023,6 +1028,7 @@ Plus de 2 000 toits installés · Garantie 50 ans · Soumission 100% gratuite su
             utm_medium: tracking.medium,
             utm_campaign: tracking.campaign,
             gclid: tracking.gclid,
+            msclkid: tracking.msclkid,
             landing_page: tracking.landing_page,
             referrer: tracking.referrer
           };
