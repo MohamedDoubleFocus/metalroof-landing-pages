@@ -939,6 +939,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         const utmCampaign = params.get('utm_campaign') || '';
         const gclid = params.get('gclid') || '';
         const msclkid = params.get('msclkid') || '';
+        const utmTerm = params.get('utm_term') || '';
+        const utmContent = params.get('utm_content') || '';
+        const matchtype = params.get('matchtype') || '';
+        const device = params.get('device') || '';
         const referrer = document.referrer || '';
         const landingPage = window.location.href || '';
 
@@ -946,8 +950,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         if (saved) {
           return {
             source: saved,
+            utm_source: sessionStorage.getItem('lead_utm_source') || '',
             medium: sessionStorage.getItem('lead_medium') || '',
             campaign: sessionStorage.getItem('lead_campaign') || '',
+            term: sessionStorage.getItem('lead_utm_term') || '',
+            content: sessionStorage.getItem('lead_utm_content') || '',
+            matchtype: sessionStorage.getItem('lead_matchtype') || '',
+            device: sessionStorage.getItem('lead_device') || '',
             gclid: sessionStorage.getItem('lead_gclid') || '',
             msclkid: sessionStorage.getItem('lead_msclkid') || '',
             landing_page: sessionStorage.getItem('lead_landing_page') || '',
@@ -978,14 +987,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
         sessionStorage.setItem('lead_source', source);
+        sessionStorage.setItem('lead_utm_source', utmSource);
         sessionStorage.setItem('lead_medium', utmMedium);
         sessionStorage.setItem('lead_campaign', utmCampaign);
+        sessionStorage.setItem('lead_utm_term', utmTerm);
+        sessionStorage.setItem('lead_utm_content', utmContent);
+        sessionStorage.setItem('lead_matchtype', matchtype);
+        sessionStorage.setItem('lead_device', device);
         sessionStorage.setItem('lead_gclid', gclid);
         sessionStorage.setItem('lead_msclkid', msclkid);
         sessionStorage.setItem('lead_landing_page', landingPage);
         sessionStorage.setItem('lead_referrer', referrer);
 
-        return { source, medium: utmMedium, campaign: utmCampaign, gclid, msclkid, landing_page: landingPage, referrer };
+        return { source, utm_source: utmSource, medium: utmMedium, campaign: utmCampaign, term: utmTerm, content: utmContent, matchtype, device, gclid, msclkid, landing_page: landingPage, referrer };
       }
 
       const tracking = getTrackingData();
@@ -1032,8 +1046,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             message: message ? message.value.trim() : '',
             language: 'fr',
             source: tracking.source,
+            utm_source: tracking.utm_source,
             utm_medium: tracking.medium,
             utm_campaign: tracking.campaign,
+            utm_term: tracking.term,
+            utm_content: tracking.content,
+            matchtype: tracking.matchtype,
+            device: tracking.device,
             gclid: tracking.gclid,
             msclkid: tracking.msclkid,
             landing_page: tracking.landing_page,
