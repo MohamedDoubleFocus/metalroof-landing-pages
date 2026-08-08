@@ -28,7 +28,14 @@ const MIME = {
 };
 
 const server = createServer(async (req, res) => {
-  let filePath = join(__dirname, req.url === "/" ? "index.html" : req.url);
+  // Ads traffic always arrives with ?gclid=...&utm_source=..., so strip the query
+  // string before resolving the file. Also accept the extensionless paths that
+  // vercel.json rewrites in production (/lp-tole -> /lp-tole.html).
+  let pathname = decodeURIComponent(req.url.split("?")[0].split("#")[0]);
+  if (pathname === "/") pathname = "/index.html";
+  if (!extname(pathname)) pathname += ".html";
+
+  let filePath = join(__dirname, pathname);
 
   try {
     const data = await readFile(filePath);
