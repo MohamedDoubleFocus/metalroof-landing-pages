@@ -10,7 +10,7 @@
 import { readFileSync, writeFileSync } from "fs";
 import { execFileSync } from "child_process";
 
-const PAGES = ["lp-metallique.html", "lp-tole.html", "lp-anglo.html", "lp-acier.html"];
+const PAGES = ["lp-metallique.html", "lp-tole.html", "lp-anglo.html", "lp-acier.html", "lp-metallique-meta.html"];
 const OPEN = "<style id=\"dist-css\">";
 const CLOSE = "</style><!--/dist-css-->";
 const LINK = '<link rel="stylesheet" href="dist.css">';
