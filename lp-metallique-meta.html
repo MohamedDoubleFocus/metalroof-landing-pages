@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Toiture métallique à Montréal | Soumission gratuite sur place</title>
-  <meta name="description" content="Toiture métallique en acier allemand G90, faite sur mesure à Montréal. Garantie 50 ans, zéro entretien. Plus de 2 000 toits posés. Soumission gratuite sur place.">
+  <meta name="description" content="Toiture métallique en acier allemand G90, faite sur mesure à Montréal. Garantie 50 ans, zéro entretien. Plus de 2 000 toits posés. Soumission gratuite sur place.">
   <!-- Page de destination pour les ads Meta. Non indexée pour ne pas concurrencer /lp-metallique en SEO. -->
   <meta name="robots" content="noindex, follow">
 
@@ -120,6 +120,52 @@
     @media (min-width: 1024px) {
       .hero-scrim { background: linear-gradient(100deg, rgba(9,13,22,.94) 0%, rgba(9,13,22,.80) 46%, rgba(9,13,22,.42) 100%); }
     }
+    /* ---- Barre logo + telephone ---- */
+    .site-head { background: #fff; border-bottom: 1px solid var(--line); padding: .6rem 0; }
+    /* logo.webp est un trait blanc (concu pour l'entete sombre des autres LP):
+       on le passe en noir pour qu'il soit lisible sur l'entete blanche */
+    .site-logo { height: 40px; width: auto; object-fit: contain; filter: brightness(0); }
+    @media (min-width: 768px) { .site-logo { height: 52px; } }
+    .head-phone { min-height: 48px; padding: .6rem 1.1rem; font-size: 1rem; border-radius: 999px; }
+    @media (min-width: 768px) { .head-phone { min-height: 56px; padding: .8rem 1.5rem; font-size: 1.0625rem; } }
+
+    /* ---- Hero: titre surligne, preuves, carte ---- */
+    .hero-h1 { color: #fff; text-shadow: 0 2px 24px rgba(0,0,0,.6); }
+    .hero-h1 .hl {
+      background: var(--cta); color: var(--cta-text);
+      padding: 0 .16em; border-radius: 4px; text-shadow: none;
+      -webkit-box-decoration-break: clone; box-decoration-break: clone;
+    }
+    .hero-sub {
+      color: rgba(255,255,255,.93); margin-top: 1.15rem; max-width: 38ch;
+      text-shadow: 0 1px 12px rgba(0,0,0,.6);
+    }
+    .hero-sub strong { color: #fff; font-weight: 700; }
+
+    .proof-list { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: .8rem; }
+    .proof-list li { display: flex; align-items: center; gap: .75rem; color: #fff; font-size: 1rem; line-height: 1.4; text-shadow: 0 1px 10px rgba(0,0,0,.6); }
+    .proof-ico {
+      flex: 0 0 auto; width: 36px; height: 36px; border-radius: 50%;
+      display: grid; place-items: center; color: var(--cta);
+      background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.24);
+    }
+
+    .hero-card {
+      display: flex; align-items: center; gap: .9rem; margin-top: 1.5rem;
+      background: rgba(255,255,255,.11); border: 1px solid rgba(255,255,255,.22);
+      border-radius: 14px; padding: .7rem; max-width: 30rem;
+      backdrop-filter: blur(6px);
+    }
+    .hero-card img { width: 76px; height: 58px; object-fit: cover; border-radius: 9px; flex: 0 0 auto; }
+    .hero-card-t { font-family: 'Figtree', sans-serif; font-weight: 700; color: var(--cta); font-size: 1rem; line-height: 1.3; }
+    .hero-card-s { color: rgba(255,255,255,.86); font-size: .875rem; line-height: 1.4; margin-top: .15rem; }
+
+    .form-note {
+      display: flex; align-items: flex-start; gap: .5rem; margin-top: .85rem;
+      font-size: .8125rem; color: var(--ink-2); line-height: 1.45;
+    }
+    .form-note svg { flex: 0 0 auto; margin-top: .1rem; }
+
     .hero-badges { display: flex; flex-wrap: wrap; gap: .4rem; }
     .hero-badge {
       display: inline-flex; align-items: center; gap: .4rem;
@@ -154,35 +200,6 @@
 
     /* ---- Bandeau preuves ---- */
     .proof-n { font-family: 'Figtree', sans-serif; font-weight: 700; font-size: clamp(2rem, 8vw, 3rem); line-height: 1; letter-spacing: -.03em; }
-
-    /* ---- Avant / apres en fondu croise ---- */
-    .ba { position: relative; border-radius: 16px; overflow: hidden; background: #0b0f17; }
-    .ba-stage { position: relative; aspect-ratio: 4 / 3; }
-    .ba-stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-    .ba-after { opacity: calc(var(--mix, 50) / 100); }
-    .ba-tag {
-      position: absolute; top: 14px; z-index: 2;
-      font-family: 'Figtree', sans-serif; font-weight: 700; font-size: .8125rem; letter-spacing: .1em;
-      padding: .45rem .8rem; border-radius: 999px; color: #fff; background: rgba(9,13,22,.72);
-      backdrop-filter: blur(4px);
-    }
-    .ba-tag-a { left: 14px; opacity: calc(1 - var(--mix, 50) / 100); }
-    .ba-tag-b { right: 14px; opacity: calc(var(--mix, 50) / 100); background: var(--cta); color: var(--cta-text); }
-    .ba-controls { padding: 1rem 1rem 1.25rem; background: #0b0f17; }
-    .ba-range { -webkit-appearance: none; appearance: none; width: 100%; height: 44px; background: transparent; cursor: grab; }
-    .ba-range:active { cursor: grabbing; }
-    .ba-range::-webkit-slider-runnable-track { height: 8px; border-radius: 99px; background: linear-gradient(90deg, #6b7280, var(--cta)); }
-    .ba-range::-moz-range-track { height: 8px; border-radius: 99px; background: linear-gradient(90deg, #6b7280, var(--cta)); }
-    .ba-range::-webkit-slider-thumb {
-      -webkit-appearance: none; appearance: none; width: 40px; height: 40px; margin-top: -16px;
-      border-radius: 50%; background: var(--cta); border: 3px solid #0b0f17;
-      box-shadow: 0 3px 14px rgba(0,0,0,.5);
-    }
-    .ba-range::-moz-range-thumb {
-      width: 40px; height: 40px; border-radius: 50%; background: var(--cta);
-      border: 3px solid #0b0f17; box-shadow: 0 3px 14px rgba(0,0,0,.5);
-    }
-    .ba-legend { display: flex; justify-content: space-between; color: #cbd5e1; font-size: .8125rem; font-weight: 600; padding: 0 4px; }
 
     /* ---- Galerie ---- */
     .grid-gal { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
@@ -255,7 +272,13 @@
       border-top: 1px solid rgba(255,255,255,.12);
     }
     .sticky-bar.show { transform: none; }
-    .sticky-bar .btn { min-height: 52px; font-size: 1rem; padding: .75rem 1rem; border-radius: 10px; }
+    /* deux boutons cote a cote a 375px: le libelle doit tenir sur une ligne */
+    .sticky-bar .btn { min-height: 52px; font-size: .875rem; padding: .75rem .5rem; border-radius: 10px; gap: .4rem; white-space: nowrap; }
+    .sticky-bar .btn svg { width: 16px; height: 16px; }
+    @media (min-width: 420px) { .sticky-bar .btn { font-size: 1rem; padding: .75rem 1rem; gap: .6rem; } .sticky-bar .btn svg { width: 18px; height: 18px; } }
+    /* second CTA: sombre, pour ne pas mettre deux jaunes cote a cote */
+    .btn-sticky-2 { background: #1B2436; color: #fff; border: 1px solid rgba(255,255,255,.28); }
+    .btn-sticky-2:hover { background: #26324a; }
     @media (min-width: 1024px) { .sticky-bar { display: none; } }
     @media (prefers-reduced-motion: reduce) { .sticky-bar { transition: none; } }
 
@@ -372,8 +395,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <!-- ============================================================
-       02. HERO PLEIN ECRAN
+       02. BARRE LOGO + TELEPHONE
        ============================================================ -->
+  <header class="site-head">
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:1rem">
+      <img src="public/images/logo.webp" width="440" height="242" fetchpriority="high" decoding="async"
+           alt="Toitures Métalliques Montréal" class="site-logo">
+      <a href="tel:+15148670787" class="btn btn-cta head-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (514) 867-0787
+      </a>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       03. HERO PLEIN ECRAN
+       ============================================================ -->
+  <main>
   <section class="hero" id="hero">
     <div class="hero-media">
       <img src="public/images/meta/hero-1200w.webp"
@@ -390,35 +428,72 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div>
           <!-- ===================================================== -->
           <!-- H1 - MODIFIER ICI pour matcher le hook de chaque ad   -->
+          <!-- La partie dans <mark class="hl"> est surlignee en jaune -->
           <!-- ===================================================== -->
-          <h1 class="t-h1" style="color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.6)">
-            Le dernier toit que vous installerez.
+          <h1 class="t-h1 hero-h1">
+            <mark class="hl">Le dernier toit</mark> que vous installerez.
           </h1>
           <!-- ===================== FIN H1 ======================== -->
 
-          <p class="t-lead" style="color:rgba(255,255,255,.92);margin-top:1.15rem;max-width:34ch;text-shadow:0 1px 12px rgba(0,0,0,.6)">
-            Toiture métallique en acier allemand G90, fabriquée sur mesure à Montréal. Économisez jusqu'à 3 500 $ cet été.
+          <p class="t-lead hero-sub">
+            Toiture métallique en acier allemand G90, fabriquée sur mesure à Montréal.
+            Économisez jusqu'à <strong>3 500 $</strong> cet été.
           </p>
 
-          <div class="hero-badges" style="margin-top:1.5rem">
-            <span class="hero-badge">2 000+ toits installés</span>
-            <span class="hero-badge">Garantie 50 ans</span>
-            <span class="hero-badge">RBQ 5836-0504-01</span>
-          </div>
+          <ul class="proof-list">
+            <li>
+              <span class="proof-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+              </span>
+              <span>Plus de 2 000 toits installés dans le Grand Montréal</span>
+            </li>
+            <li>
+              <span class="proof-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+              </span>
+              <span>Garantie 50 ans, transférable au prochain propriétaire</span>
+            </li>
+            <li>
+              <span class="proof-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              </span>
+              <span>Licence RBQ 5836-0504-01, entreprise assurée</span>
+            </li>
+          </ul>
 
           <!-- ===================================================== -->
           <!-- OFFRE - supprimer ce bloc si elle n'est plus valide   -->
           <!-- ===================================================== -->
-          <div class="offer-strip" style="margin-top:1.25rem">
-            <span aria-hidden="true">⚡</span>
-            <span>Offre d'été : économisez 3 500 $ · 8 places restantes</span>
+          <div class="hero-card">
+            <img src="public/images/meta/g08-400w.webp" width="400" height="300" loading="lazy" decoding="async"
+                 alt="Tuiles métalliques noires posées sur une tourelle">
+            <div>
+              <p class="hero-card-t">Offre d'été : économisez 3 500 $</p>
+              <p class="hero-card-s">8 places restantes pour une pose avant l'automne.</p>
+            </div>
           </div>
           <!-- ==================== FIN OFFRE ====================== -->
+
+          <!-- Before / After -->
+          <div class="mt-6 flex rounded-xl overflow-hidden border border-white/10">
+            <div class="relative w-1/2">
+              <img src="public/images/before.webp" alt="Vieux toit en bardeaux d'asphalte avant les travaux" width="600" height="400" loading="lazy" decoding="async" class="w-full h-48 md:h-64 object-cover">
+              <span class="absolute top-2 left-2 bg-black/70 text-white text-sm font-bold px-3 py-1 rounded">AVANT</span>
+            </div>
+            <div class="w-px bg-white/40 shrink-0"></div>
+            <div class="relative w-1/2">
+              <img src="public/images/after.webp" alt="La même maison avec sa toiture métallique neuve" width="600" height="480" loading="lazy" decoding="async" class="w-full h-48 md:h-64 object-cover">
+              <span class="absolute top-2 left-2 bg-black/70 text-white text-sm font-bold px-3 py-1 rounded">APRÈS</span>
+            </div>
+          </div>
         </div>
 
         <!-- Formulaire 3 champs -->
         <div id="hero-form" class="card" style="padding:clamp(1.25rem,4vw,2rem)">
-          <h2 class="t-h3" style="text-align:center;margin-bottom:1rem;font-size:clamp(1.25rem,4vw,1.6rem)">Obtenez votre soumission gratuite</h2>
+          <h2 class="t-h3" style="margin-bottom:.35rem;font-size:clamp(1.25rem,4vw,1.6rem)">Obtenez votre soumission gratuite</h2>
+          <p style="color:var(--ink-2);font-size:.9375rem;line-height:1.5;margin-bottom:1.15rem">
+            3 champs, aucune obligation. On se déplace chez vous avec un prix clair.
+          </p>
           <form class="lp-form" data-form-id="hero" novalidate>
             <div style="position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden" aria-hidden="true">
               <input type="text" name="company_fax_number" tabindex="-1" autocomplete="nope">
@@ -443,8 +518,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <button type="submit" class="btn btn-cta btn-wide lp-submit" style="margin-top:1.25rem;font-size:1.125rem">
               Obtenir ma soumission gratuite →
             </button>
-            <p style="margin-top:.85rem;text-align:center;font-size:.875rem;color:var(--ink-2);line-height:1.5">
-              Sans engagement · On se déplace gratuitement · Vos informations restent confidentielles
+            <p class="form-note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              <span>Sans engagement · On se déplace gratuitement · Vos informations restent confidentielles</span>
             </p>
           </form>
         </div>
@@ -454,40 +530,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- ============================================================
-       03. AVANT / APRES - fondu croise
-       ============================================================ -->
-  <section class="sec" style="background:var(--alt)">
-    <div class="wrap">
-      <div class="rv" style="text-align:center;max-width:46ch;margin:0 auto 2.25rem">
-        <p class="t-kicker" style="color:var(--ink-2)">La même maison</p>
-        <h2 class="t-h2" style="margin-top:.6rem">Glissez pour voir la différence</h2>
-        <p class="t-body" style="color:var(--ink-2);margin-top:.9rem">
-          Bardeaux d'asphalte usés à gauche, toiture métallique neuve à droite. Bougez le curseur.
-        </p>
-      </div>
-
-      <div class="ba rv bleed" style="max-width:900px;margin:0 auto" id="ba">
-        <div class="ba-stage">
-          <img src="public/images/meta/ba-avant-900w.webp" width="900" height="675" loading="lazy" decoding="async"
-               alt="Toit en bardeaux d'asphalte bruns et usés avant les travaux">
-          <img class="ba-after" src="public/images/meta/ba-apres-900w.webp" width="900" height="675" loading="lazy" decoding="async"
-               alt="La même maison avec sa toiture métallique brune neuve">
-          <span class="ba-tag ba-tag-a">AVANT</span>
-          <span class="ba-tag ba-tag-b">APRÈS</span>
-        </div>
-        <div class="ba-controls">
-          <label class="sr-only" for="ba-range">Comparer l'avant et l'après</label>
-          <input class="ba-range" type="range" id="ba-range" min="0" max="100" value="50" step="1"
-                 aria-describedby="ba-help">
-          <div class="ba-legend"><span>Ancien toit</span><span>Toit métallique</span></div>
-          <p id="ba-help" class="sr-only">Glissez le curseur pour passer de l'ancien toit à la toiture métallique.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       04. BARRE DE PREUVES
+       03. BARRE DE PREUVES
        ============================================================ -->
   <section class="sec" style="padding-top:clamp(2.5rem,7vw,4rem);padding-bottom:clamp(2.5rem,7vw,4rem)">
     <div class="wrap">
@@ -504,7 +547,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p style="font-size:.9375rem;color:var(--ink-2);margin-top:.25rem">sur Google (50+ avis)</p>
         </div>
         <div>
-          <div class="proof-n">2 000+</div>
+          <div class="proof-n">2 000+</div>
           <p style="font-size:.9375rem;color:var(--ink-2);margin-top:.25rem">toitures installées</p>
         </div>
         <div>
@@ -527,7 +570,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- ============================================================
-       05. GALERIE
+       04. GALERIE
        ============================================================ -->
   <section class="sec" style="background:var(--alt)" id="realisations">
     <div class="wrap">
@@ -567,7 +610,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- ============================================================
-       06. LES 2 PRODUITS
+       05. LES 2 PRODUITS
        ============================================================ -->
   <section class="sec">
     <div class="wrap">
@@ -603,7 +646,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- ============================================================
-       07. OBJECTIONS
+       06. OBJECTIONS
        ============================================================ -->
   <section class="sec" style="background:var(--alt)">
     <div class="wrap">
@@ -612,12 +655,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="rv" style="background:#fff;border-radius:16px;padding:1.5rem;border:1px solid var(--line);border-left:5px solid var(--cta)">
           <h3 class="t-h3" style="margin-bottom:.75rem">"Je vais attendre encore quelques années"</h3>
-          <p class="t-body" style="color:var(--ink-2)">Chaque année d'attente, votre toit d'asphalte se dégrade un peu plus. Une réparation coûte entre 1 500 $ et 3 000 $. Deux ou trois appels de service et vous avez payé le tiers d'un toit neuf. Le métal, lui, ne vous redemande rien pendant 50 ans.</p>
+          <p class="t-body" style="color:var(--ink-2)">Chaque année d'attente, votre toit d'asphalte se dégrade un peu plus. Une réparation coûte entre 1 500 $ et 3 000 $. Deux ou trois appels de service et vous avez payé le tiers d'un toit neuf. Le métal, lui, ne vous redemande rien pendant 50 ans.</p>
         </div>
 
         <div class="rv" style="background:#fff;border-radius:16px;padding:1.5rem;border:1px solid var(--line);border-left:5px solid var(--cta)">
           <h3 class="t-h3" style="margin-bottom:.75rem">"C'est trop cher"</h3>
-          <p class="t-body" style="color:var(--ink-2)">Le coût initial est plus élevé, c'est vrai. Mais sur 40 ans, un toit en asphalte vous coûtera 48 000 $ (3 remplacements + réparations). Un toit métallique : un seul investissement d'environ 25 000 $, et c'est réglé pour la vie.</p>
+          <p class="t-body" style="color:var(--ink-2)">Le coût initial est plus élevé, c'est vrai. Mais sur 40 ans, un toit en asphalte vous coûtera 48 000 $ (3 remplacements + réparations). Un toit métallique : un seul investissement d'environ 25 000 $, et c'est réglé pour la vie.</p>
         </div>
 
         <div class="rv" style="background:#fff;border-radius:16px;padding:1.5rem;border:1px solid var(--line);border-left:5px solid var(--cta)">
@@ -635,7 +678,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- ============================================================
-       08. COMPARATIF 40 ANS
+       07. COMPARATIF 40 ANS
        ============================================================ -->
   <section class="sec">
     <div class="wrap wrap-narrow">
@@ -645,10 +688,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="cmp rv">
           <h3 class="t-h3" style="text-align:center;margin-bottom:1rem">Asphalte</h3>
           <dl style="margin:0">
-            <div class="cmp-row"><dt>Coût initial</dt><dd>~12 000 $</dd></div>
+            <div class="cmp-row"><dt>Coût initial</dt><dd>~12 000 $</dd></div>
             <div class="cmp-row"><dt>Durée de vie</dt><dd>12-15 ans</dd></div>
             <div class="cmp-row"><dt>Remplacements sur 40 ans</dt><dd>4 fois</dd></div>
-            <div class="cmp-row"><dt>Coût total sur 40 ans</dt><dd style="color:var(--red);font-size:1.125rem">~48 000 $</dd></div>
+            <div class="cmp-row"><dt>Coût total sur 40 ans</dt><dd style="color:var(--red);font-size:1.125rem">~48 000 $</dd></div>
             <div class="cmp-row"><dt>Entretien annuel</dt><dd>Oui</dd></div>
             <div class="cmp-row"><dt>Résistance aux vents</dt><dd>120 km/h</dd></div>
           </dl>
@@ -658,10 +701,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--cta-text);font-family:'Figtree',sans-serif;font-weight:700;font-size:.875rem;padding:.35rem 1rem;border-radius:999px;white-space:nowrap">⭐ Meilleur choix</span>
           <h3 class="t-h3" style="text-align:center;margin:.5rem 0 1rem">Toiture métallique</h3>
           <dl style="margin:0">
-            <div class="cmp-row"><dt>Coût initial</dt><dd>~25 000 $</dd></div>
+            <div class="cmp-row"><dt>Coût initial</dt><dd>~25 000 $</dd></div>
             <div class="cmp-row"><dt>Durée de vie</dt><dd style="color:var(--green-text)">50+ ans</dd></div>
             <div class="cmp-row"><dt>Remplacements sur 40 ans</dt><dd style="color:var(--green-text)">0</dd></div>
-            <div class="cmp-row"><dt>Coût total sur 40 ans</dt><dd style="color:var(--green-text);font-size:1.125rem">~25 000 $</dd></div>
+            <div class="cmp-row"><dt>Coût total sur 40 ans</dt><dd style="color:var(--green-text);font-size:1.125rem">~25 000 $</dd></div>
             <div class="cmp-row"><dt>Entretien annuel</dt><dd style="color:var(--green-text)">Aucun</dd></div>
             <div class="cmp-row"><dt>Résistance aux vents</dt><dd style="color:var(--green-text)">200 km/h</dd></div>
           </dl>
@@ -669,13 +712,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <p class="t-lead rv" style="text-align:center;margin-top:2rem;font-family:'Figtree',sans-serif;font-weight:700;max-width:30ch;margin-left:auto;margin-right:auto">
-        Investir dans une toiture métallique, c'est économiser 25 000 $ sur la vie de votre maison.
+        Investir dans une toiture métallique, c'est économiser 25 000 $ sur la vie de votre maison.
       </p>
     </div>
   </section>
 
   <!-- ============================================================
-       09. ADMISSIBILITE
+       08. ADMISSIBILITE
        ============================================================ -->
   <section class="sec" style="background:var(--alt)">
     <div class="wrap">
@@ -709,7 +752,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- ============================================================
-       10. PROCEDE EN 4 ETAPES
+       09. PROCEDE EN 4 ETAPES
        ============================================================ -->
   <section class="sec">
     <div class="wrap">
@@ -758,7 +801,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- ============================================================
-       11. TEMOIGNAGES
+       10. TEMOIGNAGES
        ============================================================ -->
   <section class="sec" style="background:var(--alt)">
     <div class="wrap">
@@ -811,28 +854,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- ============================================================
-       12. PRIX
+       11. PRIX
        ============================================================ -->
   <section class="sec" id="prix">
     <div class="wrap">
       <div class="rv" style="text-align:center;max-width:52ch;margin:0 auto 2.5rem">
         <h2 class="t-h2">Combien coûte une toiture métallique à Montréal?</h2>
         <p class="t-body" style="color:var(--ink-2);margin-top:1rem">
-          Ça dépend de la superficie, de la pente et du produit que vous choisissez. Voici ce que ça donne pour une maison de 2 000 pi² dans le Grand Montréal.
+          Ça dépend de la superficie, de la pente et du produit que vous choisissez. Voici ce que ça donne pour une maison de 2 000 pi² dans le Grand Montréal.
         </p>
       </div>
 
       <div style="display:grid;gap:1.5rem;max-width:900px;margin:0 auto" class="md:grid-cols-2">
         <div class="rv" style="background:#fff;border:1px solid var(--line);border-radius:18px;padding:1.75rem;box-shadow:0 4px 24px rgba(0,0,0,.06)">
           <h3 class="t-h3">Tuiles métalliques</h3>
-          <p class="font-h" style="font-size:clamp(2rem,7vw,2.75rem);margin:.6rem 0;letter-spacing:-.03em">Environ 22 000 $</p>
-          <p class="t-body" style="color:var(--ink-2);font-size:1rem">Pour une maison de 2 000 pi². Le look des tuiles européennes, en acier G90. Garantie 50 ans.</p>
+          <p class="font-h" style="font-size:clamp(2rem,7vw,2.75rem);margin:.6rem 0;letter-spacing:-.03em">Environ 22 000 $</p>
+          <p class="t-body" style="color:var(--ink-2);font-size:1rem">Pour une maison de 2 000 pi². Le look des tuiles européennes, en acier G90. Garantie 50 ans.</p>
         </div>
         <div class="rv" style="position:relative;background:#fff;border:2px solid var(--cta);border-radius:18px;padding:1.75rem;box-shadow:0 10px 40px rgba(0,0,0,.10)">
           <span style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--cta);color:var(--cta-text);font-family:'Figtree',sans-serif;font-weight:700;font-size:.8125rem;padding:.3rem .9rem;border-radius:999px">Premium</span>
           <h3 class="t-h3" style="margin-top:.4rem">Joint debout</h3>
-          <p class="font-h" style="font-size:clamp(2rem,7vw,2.75rem);margin:.6rem 0;letter-spacing:-.03em">Environ 34 000 $</p>
-          <p class="t-body" style="color:var(--ink-2);font-size:1rem">Pour une maison de 2 000 pi². Aucune vis apparente, des lignes droites. C'est ce qu'on pose sur les maisons modernes.</p>
+          <p class="font-h" style="font-size:clamp(2rem,7vw,2.75rem);margin:.6rem 0;letter-spacing:-.03em">Environ 34 000 $</p>
+          <p class="t-body" style="color:var(--ink-2);font-size:1rem">Pour une maison de 2 000 pi². Aucune vis apparente, des lignes droites. C'est ce qu'on pose sur les maisons modernes.</p>
         </div>
       </div>
 
@@ -851,7 +894,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- ============================================================
-       13. FAQ
+       12. FAQ
        ============================================================ -->
   <section class="sec" style="background:var(--alt)">
     <div class="wrap wrap-narrow">
@@ -864,7 +907,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
           </button></h3>
           <div class="faq-panel" id="faq-p1" role="region" aria-labelledby="faq-t1">
-            <p class="t-body" style="padding:0 1.25rem 1.25rem;color:var(--ink-2);font-size:1rem">Pour une maison de 2 000 pi², comptez environ 22 000 $ en tuiles métalliques et environ 34 000 $ en joint debout. La pente et la complexité du toit font varier le montant. On vous donne le prix exact sur place, gratuitement.</p>
+            <p class="t-body" style="padding:0 1.25rem 1.25rem;color:var(--ink-2);font-size:1rem">Pour une maison de 2 000 pi², comptez environ 22 000 $ en tuiles métalliques et environ 34 000 $ en joint debout. La pente et la complexité du toit font varier le montant. On vous donne le prix exact sur place, gratuitement.</p>
           </div>
         </div>
 
@@ -912,7 +955,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- ============================================================
-       14. FORMULAIRE FINAL
+       13. FORMULAIRE FINAL
        ============================================================ -->
   <section class="sec" id="final">
     <div class="wrap wrap-narrow">
@@ -958,13 +1001,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           Appelez maintenant : (514) 867-0787
         </a>
-        <p style="margin-top:1.25rem;font-size:.9375rem;color:var(--ink-2)">Plus de 2 000 propriétaires à Montréal nous ont fait confiance.</p>
+        <p style="margin-top:1.25rem;font-size:.9375rem;color:var(--ink-2)">Plus de 2 000 propriétaires à Montréal nous ont fait confiance.</p>
       </div>
     </div>
   </section>
 
+  </main>
+
   <!-- ============================================================
-       15. FOOTER
+       14. FOOTER
        ============================================================ -->
   <footer style="background:var(--dark);padding:2.5rem 0">
     <div class="wrap" style="text-align:center">
@@ -980,14 +1025,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </footer>
 
   <!-- ============================================================
-       16. BARRE STICKY MOBILE
+       15. BARRE STICKY MOBILE
        ============================================================ -->
   <div class="sticky-bar">
-    <a href="tel:+15148670787" class="btn btn-ghost-light">
+    <a href="tel:+15148670787" class="btn btn-cta">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      Appeler
+      Appeler maintenant
     </a>
-    <a href="#hero-form" class="btn btn-cta">Soumission gratuite</a>
+    <a href="#hero-form" class="btn btn-sticky-2">Soumission gratuite</a>
   </div>
 
   <!-- Lightbox -->
@@ -1031,36 +1076,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           entries.forEach(function (e) { stickyBar.classList.toggle('show', !e.isIntersecting); });
         }, { threshold: 0.12 }).observe(heroForm);
       }
-    }
-
-    /* ---------- Avant / apres en fondu croise ---------- */
-    var ba = document.getElementById('ba');
-    var baRange = document.getElementById('ba-range');
-    if (ba && baRange) {
-      var applyMix = function () { ba.style.setProperty('--mix', baRange.value); };
-      applyMix();
-      baRange.addEventListener('input', applyMix);
-      // petite demo au premier passage: montre que c'est manipulable
-      var demoed = false;
-      var baObs = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (!e.isIntersecting || demoed) return;
-          demoed = true;
-          baObs.disconnect();
-          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-          var from = 50, to = 100, t0 = null;
-          var step = function (ts) {
-            if (!t0) t0 = ts;
-            var p = Math.min((ts - t0) / 900, 1);
-            var eased = 1 - Math.pow(1 - p, 3);
-            baRange.value = String(Math.round(from + (to - from) * eased));
-            applyMix();
-            if (p < 1) requestAnimationFrame(step);
-          };
-          requestAnimationFrame(step);
-        });
-      }, { threshold: 0.5 });
-      baObs.observe(ba);
     }
 
     /* ---------- FAQ ---------- */

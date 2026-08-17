@@ -71,20 +71,6 @@ async function emit(name, src, widths, opts = {}) {
 console.log("=== HERO ===");
 await emit("hero", HERO, [1920, 1200, 768, 480], { q: 72 });
 
-console.log("\n=== AVANT / APRES (meme boite, pour le fondu croise) ===");
-// the two drone shots are framed differently; crop BEFORE to approach AFTER's framing
-{
-  const before = readFileSync(SRC + "before.webp");
-  const cropped = await sharp(before).extract({ left: 120, top: 40, width: 450, height: 355 }).toBuffer();
-  const a = await sharp(cropped).resize(900, 675, { fit: "cover" }).webp({ quality: 78, effort: 6 }).toBuffer();
-  writeFileSync(OUT + "ba-avant-900w.webp", a);
-  const b = await sharp(readFileSync(SRC + "after.webp")).resize(900, 675, { fit: "cover" }).webp({ quality: 78, effort: 6 }).toBuffer();
-  writeFileSync(OUT + "ba-apres-900w.webp", b);
-  console.log(`ba-avant-900w.webp  900x675 ${Math.round(a.length / 1024)}KB`);
-  console.log(`ba-apres-900w.webp  900x675 ${Math.round(b.length / 1024)}KB`);
-  manifest.push({ name: "avant-apres", src: "before.webp + after.webp", made: [{ file: "ba-avant-900w.webp", w: 900, h: 675 }, { file: "ba-apres-900w.webp", w: 900, h: 675 }] });
-}
-
 console.log("\n=== GALERIE ===");
 for (const [name, src] of GALLERY) await emit(name, src, [1400, 800, 400]);
 
