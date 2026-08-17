@@ -211,27 +211,13 @@
     .proof-n { font-family: 'Figtree', sans-serif; font-weight: 700; font-size: clamp(2rem, 8vw, 3rem); line-height: 1; letter-spacing: -.03em; }
 
     /* ---- Galerie ---- */
-    /* dense: les cellules qui s'etendent sur 2 rangees laisseraient des trous,
-       le navigateur remplit les vides avec les photos suivantes */
-    .grid-gal { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; grid-auto-flow: dense; }
+    /* 12 photos: 2, 3 et 4 colonnes tombent toujours juste, aucune rangee trouee */
+    .grid-gal { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
     @media (min-width: 640px) { .grid-gal { grid-template-columns: repeat(3, 1fr); gap: 12px; } }
     @media (min-width: 1024px) { .grid-gal { grid-template-columns: repeat(4, 1fr); gap: 14px; } }
     .gal-item { position: relative; margin: 0; overflow: hidden; border-radius: 12px; background: #eef1f6; cursor: zoom-in; border: 0; padding: 0; display: block; width: 100%; }
     .gal-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s cubic-bezier(.16,1,.3,1); aspect-ratio: 4 / 3; }
     .gal-item:hover img { transform: scale(1.06); }
-    /* La derniere rangee ne doit pas rester trouee. Les grilles font 8 et 6 photos:
-       - 2 colonnes (mobile): 8 et 6 tombent juste, aucun span
-       - 3 colonnes: la grille de 8 a besoin d'une cellule double pour faire 9
-       - 4 colonnes: la grille de 6 a besoin de deux cellules doubles pour faire 8 */
-    @media (min-width: 640px) and (max-width: 1023px) {
-      .gal-item.span-md { grid-column: span 2; }
-      .gal-item.span-md img { aspect-ratio: 16 / 9; }
-    }
-    @media (min-width: 1024px) {
-      .gal-item.span-lg { grid-column: span 2; }
-      .gal-item.span-lg img { aspect-ratio: 16 / 9; }
-    }
-
 /* ---- Lightbox ---- */
     .lb { position: fixed; inset: 0; z-index: 90; display: none; background: rgba(6,9,15,.95); }
     .lb[open], .lb.on { display: flex; align-items: center; justify-content: center; }
@@ -596,27 +582,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="grid-gal rv bleed" id="gal">
-        <button class="gal-item span-md" type="button" data-i="0"><img src="public/images/meta/g01-400w.webp" srcset="public/images/meta/g01-400w.webp 400w, public/images/meta/g01-800w.webp 800w" sizes="(max-width:639px) 50vw, 33vw" width="800" height="448" loading="lazy" decoding="async" alt="Toiture à joints debout en acier gris sur un bungalow contemporain, vue par drone"></button>
-        <button class="gal-item" type="button" data-i="1"><img src="public/images/meta/g05-400w.webp" srcset="public/images/meta/g05-400w.webp 400w, public/images/meta/g05-800w.webp 800w" sizes="(max-width:639px) 50vw, 25vw" width="800" height="600" loading="lazy" decoding="async" alt="Toiture en tuiles métalliques rouges sur une maison en brique"></button>
-        <button class="gal-item" type="button" data-i="2"><img src="public/images/meta/g08-400w.webp" srcset="public/images/meta/g08-400w.webp 400w, public/images/meta/g08-800w.webp 800w" sizes="(max-width:639px) 50vw, 25vw" width="800" height="600" loading="lazy" decoding="async" alt="Tourelle coiffée de tuiles métalliques noires, détail architectural"></button>
-        <button class="gal-item" type="button" data-i="3"><img src="public/images/meta/g12-400w.webp" srcset="public/images/meta/g12-400w.webp 400w, public/images/meta/g12-800w.webp 800w" sizes="(max-width:639px) 50vw, 25vw" width="800" height="593" loading="lazy" decoding="async" alt="Toiture métallique grise sur une maison en pierre, vue drone plongeante"></button>
-        <button class="gal-item" type="button" data-i="4"><img src="public/images/meta/g06-400w.webp" srcset="public/images/meta/g06-400w.webp 400w, public/images/meta/g06-800w.webp 800w" sizes="(max-width:639px) 50vw, 25vw" width="800" height="600" loading="lazy" decoding="async" alt="Toiture en tuiles métalliques bordeaux sur une maison de deux étages"></button>
-        <button class="gal-item" type="button" data-i="5"><img src="public/images/meta/g02-400w.webp" srcset="public/images/meta/g02-400w.webp 400w, public/images/meta/g02-800w.webp 800w" sizes="(max-width:639px) 50vw, 25vw" width="800" height="714" loading="lazy" decoding="async" alt="Détail d'une toiture à joints debout gris-bleu vue du dessus"></button>
-        <button class="gal-item" type="button" data-i="6"><img src="public/images/meta/g04-400w.webp" srcset="public/images/meta/g04-400w.webp 400w, public/images/meta/g04-800w.webp 800w" sizes="(max-width:639px) 50vw, 33vw" width="800" height="450" loading="lazy" decoding="async" alt="Toiture à joints debout bleue sur une maison de plain-pied"></button>
-        <button class="gal-item" type="button" data-i="7"><img src="public/images/meta/g07-400w.webp" srcset="public/images/meta/g07-400w.webp 400w, public/images/meta/g07-800w.webp 800w" sizes="(max-width:639px) 50vw, 25vw" width="800" height="450" loading="lazy" decoding="async" alt="Toiture en tuiles métalliques terracotta avec tourelle"></button>
-      </div>
-
-      <div class="rv" style="text-align:center;margin:2rem 0">
-        <a href="#hero-form" class="btn btn-cta">Obtenez votre soumission gratuite</a>
-      </div>
-
-      <div class="grid-gal rv bleed">
-        <button class="gal-item span-lg" type="button" data-i="8"><img src="public/images/meta/g03-400w.webp" srcset="public/images/meta/g03-400w.webp 400w, public/images/meta/g03-800w.webp 800w" sizes="(max-width:639px) 50vw, 25vw" width="800" height="509" loading="lazy" decoding="async" alt="Toiture à joints debout brune sur une grande résidence, vue par drone"></button>
-        <button class="gal-item" type="button" data-i="9"><img src="public/images/meta/g10-400w.webp" srcset="public/images/meta/g10-400w.webp 400w, public/images/meta/g10-800w.webp 800w" sizes="(max-width:639px) 50vw, 25vw" width="800" height="450" loading="lazy" decoding="async" alt="Toiture en tuiles métalliques gris-bleu, vue par drone"></button>
-        <button class="gal-item" type="button" data-i="10"><img src="public/images/meta/g09-400w.webp" srcset="public/images/meta/g09-400w.webp 400w, public/images/meta/g09-800w.webp 800w" sizes="(max-width:639px) 50vw, 25vw" width="800" height="450" loading="lazy" decoding="async" alt="Toiture en tuiles métalliques brunes sur une maison en brique"></button>
-        <button class="gal-item span-lg" type="button" data-i="11"><img src="public/images/meta/g11-400w.webp" srcset="public/images/meta/g11-400w.webp 400w, public/images/meta/g11-800w.webp 800w" sizes="(max-width:639px) 50vw, 25vw" width="800" height="450" loading="lazy" decoding="async" alt="Toiture en tuiles métalliques rouges vue du ciel"></button>
-        <button class="gal-item" type="button" data-i="12"><img src="public/images/meta/g13-400w.webp" srcset="public/images/meta/g13-400w.webp 400w, public/images/meta/g13-800w.webp 800w" sizes="(max-width:639px) 50vw, 25vw" width="800" height="450" loading="lazy" decoding="async" alt="Toiture métallique gris foncé sur une résidence avec piscine, vue par drone"></button>
-        <button class="gal-item" type="button" data-i="13"><img src="public/images/meta/g14-400w.webp" srcset="public/images/meta/g14-400w.webp 400w, public/images/meta/g14-800w.webp 800w" sizes="(max-width:639px) 50vw, 25vw" width="800" height="600" loading="lazy" decoding="async" alt="Équipe d'installateurs au travail sur un chantier de toiture métallique"></button>
+        <button class="gal-item" type="button" data-i="0"><img src="public/images/meta/g01-400w.webp" srcset="public/images/meta/g01-400w.webp 400w, public/images/meta/g01-800w.webp 800w" sizes="(max-width:639px) 50vw, (max-width:1023px) 33vw, 25vw" width="800" height="600" loading="lazy" decoding="async" alt="Toiture à joints debout en acier gris sur un bungalow contemporain, vue par drone"></button>
+        <button class="gal-item" type="button" data-i="1"><img src="public/images/meta/g05-400w.webp" srcset="public/images/meta/g05-400w.webp 400w, public/images/meta/g05-800w.webp 800w" sizes="(max-width:639px) 50vw, (max-width:1023px) 33vw, 25vw" width="800" height="600" loading="lazy" decoding="async" alt="Toiture en tuiles métalliques rouges sur une maison en brique"></button>
+        <button class="gal-item" type="button" data-i="2"><img src="public/images/meta/g08-400w.webp" srcset="public/images/meta/g08-400w.webp 400w, public/images/meta/g08-800w.webp 800w" sizes="(max-width:639px) 50vw, (max-width:1023px) 33vw, 25vw" width="800" height="600" loading="lazy" decoding="async" alt="Tourelle coiffée de tuiles métalliques noires, détail architectural"></button>
+        <button class="gal-item" type="button" data-i="3"><img src="public/images/meta/g12-400w.webp" srcset="public/images/meta/g12-400w.webp 400w, public/images/meta/g12-800w.webp 800w" sizes="(max-width:639px) 50vw, (max-width:1023px) 33vw, 25vw" width="800" height="600" loading="lazy" decoding="async" alt="Toiture métallique grise sur une maison en pierre, vue drone plongeante"></button>
+        <button class="gal-item" type="button" data-i="4"><img src="public/images/meta/g06-400w.webp" srcset="public/images/meta/g06-400w.webp 400w, public/images/meta/g06-800w.webp 800w" sizes="(max-width:639px) 50vw, (max-width:1023px) 33vw, 25vw" width="800" height="600" loading="lazy" decoding="async" alt="Toiture en tuiles métalliques bordeaux sur une maison de deux étages"></button>
+        <button class="gal-item" type="button" data-i="5"><img src="public/images/meta/g02-400w.webp" srcset="public/images/meta/g02-400w.webp 400w, public/images/meta/g02-800w.webp 800w" sizes="(max-width:639px) 50vw, (max-width:1023px) 33vw, 25vw" width="800" height="600" loading="lazy" decoding="async" alt="Détail d'une toiture à joints debout gris-bleu vue du dessus"></button>
+        <button class="gal-item" type="button" data-i="6"><img src="public/images/meta/g04-400w.webp" srcset="public/images/meta/g04-400w.webp 400w, public/images/meta/g04-800w.webp 800w" sizes="(max-width:639px) 50vw, (max-width:1023px) 33vw, 25vw" width="800" height="600" loading="lazy" decoding="async" alt="Toiture à joints debout bleue sur une maison de plain-pied"></button>
+        <button class="gal-item" type="button" data-i="7"><img src="public/images/meta/g07-400w.webp" srcset="public/images/meta/g07-400w.webp 400w, public/images/meta/g07-800w.webp 800w" sizes="(max-width:639px) 50vw, (max-width:1023px) 33vw, 25vw" width="800" height="600" loading="lazy" decoding="async" alt="Toiture en tuiles métalliques terracotta avec tourelle"></button>
+        <button class="gal-item" type="button" data-i="8"><img src="public/images/meta/g03-400w.webp" srcset="public/images/meta/g03-400w.webp 400w, public/images/meta/g03-800w.webp 800w" sizes="(max-width:639px) 50vw, (max-width:1023px) 33vw, 25vw" width="800" height="600" loading="lazy" decoding="async" alt="Toiture à joints debout brune sur une grande résidence, vue par drone"></button>
+        <button class="gal-item" type="button" data-i="9"><img src="public/images/meta/g10-400w.webp" srcset="public/images/meta/g10-400w.webp 400w, public/images/meta/g10-800w.webp 800w" sizes="(max-width:639px) 50vw, (max-width:1023px) 33vw, 25vw" width="800" height="600" loading="lazy" decoding="async" alt="Toiture en tuiles métalliques gris-bleu, vue par drone"></button>
+        <button class="gal-item" type="button" data-i="10"><img src="public/images/meta/g11-400w.webp" srcset="public/images/meta/g11-400w.webp 400w, public/images/meta/g11-800w.webp 800w" sizes="(max-width:639px) 50vw, (max-width:1023px) 33vw, 25vw" width="800" height="600" loading="lazy" decoding="async" alt="Toiture en tuiles métalliques rouges vue du ciel"></button>
+        <button class="gal-item" type="button" data-i="11"><img src="public/images/meta/g14-400w.webp" srcset="public/images/meta/g14-400w.webp 400w, public/images/meta/g14-800w.webp 800w" sizes="(max-width:639px) 50vw, (max-width:1023px) 33vw, 25vw" width="800" height="600" loading="lazy" decoding="async" alt="Équipe d'installateurs au travail sur un chantier de toiture métallique"></button>
       </div>
 
       <div class="rv" style="text-align:center;margin-top:2.5rem">
